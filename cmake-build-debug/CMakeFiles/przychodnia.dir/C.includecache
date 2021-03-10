@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/programista/CLionProjects/przychodnia/main.c
+stdio.h
+-
+stdlib.h
+-
+sqlite3.h
+C:/Users/programista/CLionProjects/przychodnia/sqlite3.h
+string.h
+-
+patients.h
+C:/Users/programista/CLionProjects/przychodnia/patients.h
+
+C:/Users/programista/CLionProjects/przychodnia/patients.h
+
+C:/Users/programista/CLionProjects/przychodnia/sqlite3.h
+stdarg.h
+-
+
