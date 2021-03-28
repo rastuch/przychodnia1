@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/przychodnia.dir/main.c.obj"
   "CMakeFiles/przychodnia.dir/patients.c.obj"
   "CMakeFiles/przychodnia.dir/sqlite3.c.obj"
+  "CMakeFiles/przychodnia.dir/visits.c.obj"
   "libprzychodnia.dll.a"
   "przychodnia.exe"
   "przychodnia.exe.manifest"

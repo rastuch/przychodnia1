@@ -4,6 +4,7 @@
 #include <string.h>
 #include "patients.h"
 #include "doctors.h"
+#include "visits.h"
 
 struct Patient {
     char name[200];
@@ -35,9 +36,22 @@ struct Doctor {
     char nfz[200];
 };
 
+struct Visit {
+    int id;
+    char patientId[50];
+    char doctorId[50];
+    char date[50];
+    char time[50];
+    char duration[50];
+    char status[200];
+};
+
+
 struct Doctor doc;
 
 struct Patient pat;
+
+struct Visit vis;
 
 void choicePatientList() {
     printf("\n");

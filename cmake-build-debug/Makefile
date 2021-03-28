@@ -250,6 +250,33 @@ sqlite3.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\przychodnia.dir\build.make CMakeFiles/przychodnia.dir/sqlite3.c.s
 .PHONY : sqlite3.c.s
 
+visits.obj: visits.c.obj
+
+.PHONY : visits.obj
+
+# target to build an object file
+visits.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\przychodnia.dir\build.make CMakeFiles/przychodnia.dir/visits.c.obj
+.PHONY : visits.c.obj
+
+visits.i: visits.c.i
+
+.PHONY : visits.i
+
+# target to preprocess a source file
+visits.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\przychodnia.dir\build.make CMakeFiles/przychodnia.dir/visits.c.i
+.PHONY : visits.c.i
+
+visits.s: visits.c.s
+
+.PHONY : visits.s
+
+# target to generate assembly for a file
+visits.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\przychodnia.dir\build.make CMakeFiles/przychodnia.dir/visits.c.s
+.PHONY : visits.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -271,6 +298,9 @@ help:
 	@echo ... sqlite3.obj
 	@echo ... sqlite3.i
 	@echo ... sqlite3.s
+	@echo ... visits.obj
+	@echo ... visits.i
+	@echo ... visits.s
 .PHONY : help
 
 

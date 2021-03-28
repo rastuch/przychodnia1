@@ -97,6 +97,12 @@
 		<Unit filename="C:/Users/programista/CLionProjects/przychodnia/sqlite3.h">
 			<Option target="przychodnia"/>
 		</Unit>
+		<Unit filename="C:/Users/programista/CLionProjects/przychodnia/visits.c">
+			<Option target="przychodnia"/>
+		</Unit>
+		<Unit filename="C:/Users/programista/CLionProjects/przychodnia/visits.h">
+			<Option target="przychodnia"/>
+		</Unit>
 		<Unit filename="C:/Users/programista/CLionProjects/przychodnia/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

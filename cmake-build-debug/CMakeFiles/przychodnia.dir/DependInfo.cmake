@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/programista/CLionProjects/przychodnia/main.c" "C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/CMakeFiles/przychodnia.dir/main.c.obj"
   "C:/Users/programista/CLionProjects/przychodnia/patients.c" "C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/CMakeFiles/przychodnia.dir/patients.c.obj"
   "C:/Users/programista/CLionProjects/przychodnia/sqlite3.c" "C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/CMakeFiles/przychodnia.dir/sqlite3.c.obj"
+  "C:/Users/programista/CLionProjects/przychodnia/visits.c" "C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/CMakeFiles/przychodnia.dir/visits.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
