@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/przychodnia.dir/doctors.c.obj"
   "CMakeFiles/przychodnia.dir/main.c.obj"
   "CMakeFiles/przychodnia.dir/patients.c.obj"
   "CMakeFiles/przychodnia.dir/sqlite3.c.obj"

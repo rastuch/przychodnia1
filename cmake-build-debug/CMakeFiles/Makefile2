@@ -93,12 +93,12 @@ clean: CMakeFiles/przychodnia.dir/clean
 CMakeFiles/przychodnia.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\przychodnia.dir\build.make CMakeFiles/przychodnia.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\przychodnia.dir\build.make CMakeFiles/przychodnia.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\programista\CLionProjects\przychodnia\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4 "Built target przychodnia"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\programista\CLionProjects\przychodnia\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5 "Built target przychodnia"
 .PHONY : CMakeFiles/przychodnia.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/przychodnia.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\programista\CLionProjects\przychodnia\cmake-build-debug\CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\programista\CLionProjects\przychodnia\cmake-build-debug\CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/przychodnia.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\programista\CLionProjects\przychodnia\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/przychodnia.dir/rule

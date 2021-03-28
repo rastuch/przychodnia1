@@ -142,6 +142,33 @@ przychodnia/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\przychodnia.dir\build.make CMakeFiles/przychodnia.dir/build
 .PHONY : przychodnia/fast
 
+doctors.obj: doctors.c.obj
+
+.PHONY : doctors.obj
+
+# target to build an object file
+doctors.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\przychodnia.dir\build.make CMakeFiles/przychodnia.dir/doctors.c.obj
+.PHONY : doctors.c.obj
+
+doctors.i: doctors.c.i
+
+.PHONY : doctors.i
+
+# target to preprocess a source file
+doctors.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\przychodnia.dir\build.make CMakeFiles/przychodnia.dir/doctors.c.i
+.PHONY : doctors.c.i
+
+doctors.s: doctors.c.s
+
+.PHONY : doctors.s
+
+# target to generate assembly for a file
+doctors.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\przychodnia.dir\build.make CMakeFiles/przychodnia.dir/doctors.c.s
+.PHONY : doctors.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -232,6 +259,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... przychodnia
+	@echo ... doctors.obj
+	@echo ... doctors.i
+	@echo ... doctors.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

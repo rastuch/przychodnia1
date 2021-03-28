@@ -76,6 +76,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/programista/CLionProjects/przychodnia/doctors.c">
+			<Option target="przychodnia"/>
+		</Unit>
+		<Unit filename="C:/Users/programista/CLionProjects/przychodnia/doctors.h">
+			<Option target="przychodnia"/>
+		</Unit>
 		<Unit filename="C:/Users/programista/CLionProjects/przychodnia/main.c">
 			<Option target="przychodnia"/>
 		</Unit>

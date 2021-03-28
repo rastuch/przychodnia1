@@ -3,6 +3,7 @@
 #include "sqlite3.h"
 #include <string.h>
 #include "patients.h"
+#include "doctors.h"
 
 struct Patient {
     char name[200];
@@ -16,6 +17,25 @@ struct Patient {
     char height[200];
     char nfz[200];
 };
+
+struct Doctor {
+    int id;
+    char name[200];
+    char secondName[200];
+    char pesel[50];
+    char pwzNumber[50];
+    char title[200];
+    char specialization[200];
+    char email[200];
+    char birthDate[200];
+    char address[200];
+    char phone[50];
+    char weight[200];
+    char height[200];
+    char nfz[200];
+};
+
+struct Doctor doc;
 
 struct Patient pat;
 
@@ -115,6 +135,5 @@ void choiceActionPatient() {
 int main() {
     printf("Hello, Przychodnio!\n");
     choiceActionPatient();
-
     return 0;
 }
