@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/programista/CLionProjects/przychodnia/doctors.c" "C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/CMakeFiles/przychodnia.dir/doctors.c.obj"
-  "C:/Users/programista/CLionProjects/przychodnia/main.c" "C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/CMakeFiles/przychodnia.dir/main.c.obj"
-  "C:/Users/programista/CLionProjects/przychodnia/patients.c" "C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/CMakeFiles/przychodnia.dir/patients.c.obj"
-  "C:/Users/programista/CLionProjects/przychodnia/sqlite3.c" "C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/CMakeFiles/przychodnia.dir/sqlite3.c.obj"
-  "C:/Users/programista/CLionProjects/przychodnia/visits.c" "C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/CMakeFiles/przychodnia.dir/visits.c.obj"
+  "C:/Users/Karol/CLionProjects/przychodnia1/doctors.c" "C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/CMakeFiles/przychodnia.dir/doctors.c.obj"
+  "C:/Users/Karol/CLionProjects/przychodnia1/main.c" "C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/CMakeFiles/przychodnia.dir/main.c.obj"
+  "C:/Users/Karol/CLionProjects/przychodnia1/patients.c" "C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/CMakeFiles/przychodnia.dir/patients.c.obj"
+  "C:/Users/Karol/CLionProjects/przychodnia1/sqlite3.c" "C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/CMakeFiles/przychodnia.dir/sqlite3.c.obj"
+  "C:/Users/Karol/CLionProjects/przychodnia1/visits.c" "C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/CMakeFiles/przychodnia.dir/visits.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

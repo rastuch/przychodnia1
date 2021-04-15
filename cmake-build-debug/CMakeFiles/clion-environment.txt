@@ -1,4 +1,4 @@
-ToolSet: w64 3.3 (local)@C:\Users\programista\ggc
+ToolSet: w64 3.3 (local)@C:\Users\Karol\Desktop\gc
 Options: 
 
 Options:

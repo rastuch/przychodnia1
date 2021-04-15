@@ -8,102 +8,102 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/programista/ggc/bin/mingw32-make.exe -f &quot;C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/Users/programista/ggc/bin/mingw32-make.exe -f &quot;C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/programista/ggc/bin/mingw32-make.exe -f &quot;C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/programista/ggc/bin/mingw32-make.exe -f &quot;C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/Karol/Desktop/gc/bin/mingw32-make.exe -f &quot;C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/Users/Karol/Desktop/gc/bin/mingw32-make.exe -f &quot;C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/Karol/Desktop/gc/bin/mingw32-make.exe -f &quot;C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/Karol/Desktop/gc/bin/mingw32-make.exe -f &quot;C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="przychodnia">
-				<Option output="C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/przychodnia.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug"/>
+				<Option output="C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/przychodnia.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/programista/ggc/include"/>
-					<Add directory="c:\users\programista\ggc\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/include"/>
-					<Add directory="c:\users\programista\ggc\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/include-fixed"/>
-					<Add directory="c:\users\programista\ggc\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:/Users/Karol/Desktop/gc/include"/>
+					<Add directory="c:\users\karol\desktop\gc\bin\../lib/gcc/i686-w64-mingw32/4.8.3/include"/>
+					<Add directory="c:\users\karol\desktop\gc\bin\../lib/gcc/i686-w64-mingw32/4.8.3/include-fixed"/>
+					<Add directory="c:\users\karol\desktop\gc\bin\../lib/gcc/i686-w64-mingw32/4.8.3/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/Users/programista/ggc/bin/mingw32-make.exe -f &quot;C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/Makefile&quot;  VERBOSE=1 przychodnia"/>
-					<CompileFile command="C:/Users/programista/ggc/bin/mingw32-make.exe -f &quot;C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/programista/ggc/bin/mingw32-make.exe -f &quot;C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/programista/ggc/bin/mingw32-make.exe -f &quot;C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/Karol/Desktop/gc/bin/mingw32-make.exe -f &quot;C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/Makefile&quot;  VERBOSE=1 przychodnia"/>
+					<CompileFile command="C:/Users/Karol/Desktop/gc/bin/mingw32-make.exe -f &quot;C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/Karol/Desktop/gc/bin/mingw32-make.exe -f &quot;C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/Karol/Desktop/gc/bin/mingw32-make.exe -f &quot;C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="przychodnia/fast">
-				<Option output="C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/przychodnia.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug"/>
+				<Option output="C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/przychodnia.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/programista/ggc/include"/>
-					<Add directory="c:\users\programista\ggc\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/include"/>
-					<Add directory="c:\users\programista\ggc\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/include-fixed"/>
-					<Add directory="c:\users\programista\ggc\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:/Users/Karol/Desktop/gc/include"/>
+					<Add directory="c:\users\karol\desktop\gc\bin\../lib/gcc/i686-w64-mingw32/4.8.3/include"/>
+					<Add directory="c:\users\karol\desktop\gc\bin\../lib/gcc/i686-w64-mingw32/4.8.3/include-fixed"/>
+					<Add directory="c:\users\karol\desktop\gc\bin\../lib/gcc/i686-w64-mingw32/4.8.3/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/Users/programista/ggc/bin/mingw32-make.exe -f &quot;C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/Makefile&quot;  VERBOSE=1 przychodnia/fast"/>
-					<CompileFile command="C:/Users/programista/ggc/bin/mingw32-make.exe -f &quot;C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/programista/ggc/bin/mingw32-make.exe -f &quot;C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/programista/ggc/bin/mingw32-make.exe -f &quot;C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/Karol/Desktop/gc/bin/mingw32-make.exe -f &quot;C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/Makefile&quot;  VERBOSE=1 przychodnia/fast"/>
+					<CompileFile command="C:/Users/Karol/Desktop/gc/bin/mingw32-make.exe -f &quot;C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/Karol/Desktop/gc/bin/mingw32-make.exe -f &quot;C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/Karol/Desktop/gc/bin/mingw32-make.exe -f &quot;C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/programista/ggc/bin/mingw32-make.exe -f &quot;C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/Users/programista/ggc/bin/mingw32-make.exe -f &quot;C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/programista/ggc/bin/mingw32-make.exe -f &quot;C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/programista/ggc/bin/mingw32-make.exe -f &quot;C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/Karol/Desktop/gc/bin/mingw32-make.exe -f &quot;C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/Users/Karol/Desktop/gc/bin/mingw32-make.exe -f &quot;C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/Karol/Desktop/gc/bin/mingw32-make.exe -f &quot;C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/Karol/Desktop/gc/bin/mingw32-make.exe -f &quot;C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/programista/ggc/bin/mingw32-make.exe -f &quot;C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/Users/programista/ggc/bin/mingw32-make.exe -f &quot;C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/programista/ggc/bin/mingw32-make.exe -f &quot;C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/programista/ggc/bin/mingw32-make.exe -f &quot;C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/Karol/Desktop/gc/bin/mingw32-make.exe -f &quot;C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/Users/Karol/Desktop/gc/bin/mingw32-make.exe -f &quot;C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/Karol/Desktop/gc/bin/mingw32-make.exe -f &quot;C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/Karol/Desktop/gc/bin/mingw32-make.exe -f &quot;C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/programista/CLionProjects/przychodnia/doctors.c">
+		<Unit filename="C:/Users/Karol/CLionProjects/przychodnia1/doctors.c">
 			<Option target="przychodnia"/>
 		</Unit>
-		<Unit filename="C:/Users/programista/CLionProjects/przychodnia/doctors.h">
+		<Unit filename="C:/Users/Karol/CLionProjects/przychodnia1/doctors.h">
 			<Option target="przychodnia"/>
 		</Unit>
-		<Unit filename="C:/Users/programista/CLionProjects/przychodnia/main.c">
+		<Unit filename="C:/Users/Karol/CLionProjects/przychodnia1/main.c">
 			<Option target="przychodnia"/>
 		</Unit>
-		<Unit filename="C:/Users/programista/CLionProjects/przychodnia/patients.c">
+		<Unit filename="C:/Users/Karol/CLionProjects/przychodnia1/patients.c">
 			<Option target="przychodnia"/>
 		</Unit>
-		<Unit filename="C:/Users/programista/CLionProjects/przychodnia/patients.h">
+		<Unit filename="C:/Users/Karol/CLionProjects/przychodnia1/patients.h">
 			<Option target="przychodnia"/>
 		</Unit>
-		<Unit filename="C:/Users/programista/CLionProjects/przychodnia/sqlite3.c">
+		<Unit filename="C:/Users/Karol/CLionProjects/przychodnia1/sqlite3.c">
 			<Option target="przychodnia"/>
 		</Unit>
-		<Unit filename="C:/Users/programista/CLionProjects/przychodnia/sqlite3.h">
+		<Unit filename="C:/Users/Karol/CLionProjects/przychodnia1/sqlite3.h">
 			<Option target="przychodnia"/>
 		</Unit>
-		<Unit filename="C:/Users/programista/CLionProjects/przychodnia/visits.c">
+		<Unit filename="C:/Users/Karol/CLionProjects/przychodnia1/visits.c">
 			<Option target="przychodnia"/>
 		</Unit>
-		<Unit filename="C:/Users/programista/CLionProjects/przychodnia/visits.h">
+		<Unit filename="C:/Users/Karol/CLionProjects/przychodnia1/visits.h">
 			<Option target="przychodnia"/>
 		</Unit>
-		<Unit filename="C:/Users/programista/CLionProjects/przychodnia/CMakeLists.txt">
+		<Unit filename="C:/Users/Karol/CLionProjects/przychodnia1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

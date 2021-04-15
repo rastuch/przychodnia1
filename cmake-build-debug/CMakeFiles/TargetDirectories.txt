@@ -1,3 +1,3 @@
-C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/CMakeFiles/przychodnia.dir
-C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/programista/CLionProjects/przychodnia/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/CMakeFiles/przychodnia.dir
+C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Karol/CLionProjects/przychodnia1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
