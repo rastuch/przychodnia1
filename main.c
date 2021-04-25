@@ -75,7 +75,7 @@ void choiceAddPatient() {
     strcpy(pat.height, "186");
     strcpy(pat.nfz, "GOS Kielce 13/a");
 
-    addPatient(pat); // funkcja odowłująca się do bazy
+    addPatient(pat); //
 
     printf("\nDodano pacjenta!");
     printf("\n\n");
