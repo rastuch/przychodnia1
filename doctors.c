@@ -33,7 +33,7 @@ static int callback(void *data, int argc, char **argv, char **azColName) {
 struct Doctor doctor;
 struct Doctor emptyDoctor;
 
-/* Funkcja usuwajÄ…ca lekarza z bazy przyjmujÄ…ca za argument id */
+/* Funkcja usuwaj¹ca lekarza z bazy przyjmuj¹ca za argument id */
 void deleteDoctorById(char id[50]) {
     sqlite3 *db;
     char *zErrMsg = 0;
@@ -68,7 +68,7 @@ void deleteDoctorById(char id[50]) {
 }
 
 
-/* Funkcja aktualizujaca lekarza w bazie, przyjmuje za argumeny id uÅ¼ytkownika oraz strukture Doctor
+/* Funkcja aktualizujaca lekarza w bazie, przyjmuje za argumeny id u¿ytkownika oraz strukture Doctor
  * jako obiekt do ktorego ma zostac zaktualizowany */
 void updateDoctorById(char id[50], struct Doctor newDoctor) {
     sqlite3 *db;
@@ -110,7 +110,7 @@ void updateDoctorById(char id[50], struct Doctor newDoctor) {
     sqlite3_close(db);
 }
 
-/* Funkcja dodajÄ…ca pacjenta do bazy przyjmujÄ…ca za argument strukture "doctor" */
+/* Funkcja dodaj¹ca pacjenta do bazy przyjmuj¹ca za argument strukture "doctor" */
 void addDoctor(struct Doctor newDoctor) {
     sqlite3 *db;
     char *zErrMsg = 0;
@@ -153,7 +153,7 @@ void addDoctor(struct Doctor newDoctor) {
 
 static int cbGetDoctor(void *data, int argc, char **argv, char **colName) {
 
-    /* Funkcja korzysta ze zmiennej globalnej "doctor" wiÄ™c wymaga upewnienia siÄ™ Å¼e jest pusta
+    /* Funkcja korzysta ze zmiennej globalnej "doctor" wiêc wymaga upewnienia siê ¿e jest pusta
      * poprzez przypisanie obiektu "emptyDoctor" */
     doctor = emptyDoctor;
     strcpy(doctor.name, argv[1] ? argv[1] : "NULL");
@@ -173,7 +173,7 @@ static int cbGetDoctor(void *data, int argc, char **argv, char **colName) {
 }
 
 
-/* Funkcja zwracajÄ…ca strukture doctor z bazy danych na podstawie podanego parametru id */
+/* Funkcja zwracaj¹ca strukture doctor z bazy danych na podstawie podanego parametru id */
 struct Doctor getDoctorById(char id[50]) {
     sqlite3 *db;
     char *zErrMsg = 0;
@@ -208,7 +208,7 @@ struct Doctor getDoctorById(char id[50]) {
 }
 
 
-/* Funkcja wywoÅ‚ania zwrotnego wyÅ›wietlajÄ…ca liste wszystkich lekarzy */
+/* Funkcja wywo³ania zwrotnego wyœwietlaj¹ca liste wszystkich lekarzy */
 static int cbShowAllPatients(void *NotUsed, int argc, char **argv, char **azColName) {
     int i;
     for (i = 0; i < argc; i++) {
@@ -219,7 +219,7 @@ static int cbShowAllPatients(void *NotUsed, int argc, char **argv, char **azColN
     return 0;
 }
 
-/* Funkcja wyÅ›wietla listÄ™ wszystkich lekarzy */
+/* Funkcja wyœwietla listê wszystkich lekarzy */
 void showAllDoctors() {
     sqlite3 *db;
     char *zErrMsg = 0;

@@ -29,7 +29,7 @@ static int callback(void *data, int argc, char **argv, char **azColName) {
     return 0;
 }
 
-/* Funkcja usuwajÄ…ca pacjenta z bazy przyjmujÄ…ca za argument id */
+/* Funkcja usuwaj¹ca pacjenta z bazy przyjmuj¹ca za argument id */
 void deletePatientById(char id[50]) {
     sqlite3 *db;
     char *zErrMsg = 0;
@@ -63,7 +63,7 @@ void deletePatientById(char id[50]) {
     sqlite3_close(db);
 }
 
-/* Funkcja dodajÄ…ca pacjenta do bazy przyjmujÄ…ca za argument strukture "patient" */
+/* Funkcja dodaj¹ca pacjenta do bazy przyjmuj¹ca za argument strukture "patient" */
 void addPatient(struct Patient newPatient) {
     sqlite3 *db;
     char *zErrMsg = 0;
@@ -103,7 +103,7 @@ void addPatient(struct Patient newPatient) {
 }
 
 
-/* Funkcja aktualizujaca pacjenta w bazie, przyjmuje za argumeny id uÅ¼ytkownika oraz strukture Patient
+/* Funkcja aktualizujaca pacjenta w bazie, przyjmuje za argumeny id u¿ytkownika oraz strukture Patient
  * jako obiekt do ktorego ma zostac zaktualizowany */
 void updatePatientById(char id[50], struct Patient newPatient) {
     sqlite3 *db;
@@ -147,10 +147,10 @@ void updatePatientById(char id[50], struct Patient newPatient) {
 }
 
 
-/* Funkcja wywoÅ‚ania zwrotnego przypisujaca informacje z bazy danych do stuktury pacjent */
+/* Funkcja wywo³ania zwrotnego przypisujaca informacje z bazy danych do stuktury pacjent */
 static int cbGetPatient(void *data, int argc, char **argv, char **colName) {
 
-    /* Funkcja korzysta ze zmiennej globalnej "patient" wiÄ™c wymaga upewnienia siÄ™ Å¼e jest pusta
+    /* Funkcja korzysta ze zmiennej globalnej "patient" wiêc wymaga upewnienia siê ¿e jest pusta
      * poprzez przypisanie obiektu "emptyPatient" */
     patient = emptyPatient;
     strcpy(patient.name, argv[1] ? argv[1] : "NULL");
@@ -167,7 +167,7 @@ static int cbGetPatient(void *data, int argc, char **argv, char **colName) {
 }
 
 
-/* Funkcja zwracajÄ…ca strukture patient z bazy danych na podstawie podanego parametru id */
+/* Funkcja zwracaj¹ca strukture patient z bazy danych na podstawie podanego parametru id */
 struct Patient getPatientById(char id[50]) {
     sqlite3 *db;
     char *zErrMsg = 0;
@@ -202,7 +202,7 @@ struct Patient getPatientById(char id[50]) {
 }
 
 
-/* Funkcja wywoÅ‚ania zwrotnego wyÅ›wietlajÄ…ca liste wszystkich pacjentÃ³w */
+/* Funkcja wywo³ania zwrotnego wyœwietlaj¹ca liste wszystkich pacjentów */
 static int cbShowAllPatients(void *NotUsed, int argc, char **argv, char **azColName) {
     int i;
     for (i = 0; i < argc; i++) {
@@ -213,7 +213,7 @@ static int cbShowAllPatients(void *NotUsed, int argc, char **argv, char **azColN
     return 0;
 }
 
-/* Funkcja wyÅ›wietla listÄ™ wszystkich pacjentÃ³w */
+/* Funkcja wyœwietla listê wszystkich pacjentów */
 void showAllpatients() {
     sqlite3 *db;
     char *zErrMsg = 0;
@@ -247,7 +247,7 @@ void showAllpatients() {
 
 
 
-//Insert data i callback to funkcje pomocnicze do uzupeÅ‚niania tabeli
+//Insert data i callback to funkcje pomocnicze do uzupe³niania tabeli
 
 
 int insertData() {
