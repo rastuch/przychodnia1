@@ -6,56 +6,73 @@
 #include "doctors.h"
 #include "visits.h"
 
-//Struct representing patient table in database
+/**
+ * Struktura reprezentujaca tabele Pacjenta w bazie danych
+  */
 struct Patient {
-    char name[200];
-    char secondName[200];
-    char pesel[50];
-    char birthDate[200];
-    char address[200];
-    char email[200];
-    char phone[50];
-    char weight[200];
-    char height[200];
-    char nfz[200];
+    char name[200]; /**< Imie */
+    char secondName[200]; /**< Nazwisko */
+    char pesel[50]; /**< Numer pesel jako tablia znakow */
+    char birthDate[200]; /**< data urodzenia w formacje DD-MM-YYYY */
+    char address[200]; /**< Adres */
+    char email[200]; /**< Email */
+    char phone[50]; /**< Numer telefonu */
+    char weight[200]; /**< Waga w kg */
+    char height[200]; /**< Wzrost w cm */
+    char nfz[200]; /**< NFZ */
 };
 
-//Struct representing doctor table in database
+/**
+ * Struktura reprezentujaca tabele Lekarza w bazie danych
+  */
 struct Doctor {
-    int id;
-    char name[200];
-    char secondName[200];
-    char pesel[50];
-    char pwzNumber[50];
-    char title[200];
-    char specialization[200];
-    char email[200];
-    char birthDate[200];
-    char address[200];
-    char phone[50];
-    char weight[200];
-    char height[200];
-    char nfz[200];
+    int id; /**< Identyfikator */
+    char name[200]; /**< Imie */
+    char secondName[200]; /**< Nazwisko */
+    char pesel[50]; /**< Numer PESEL */
+    char pwzNumber[50]; /**< Numer PWZ */
+    char title[200]; /**< Tytul naukowy */
+    char specialization[200]; /**< Specjalizacja */
+    char email[200]; /**< Email */
+    char birthDate[200]; /**< Data urodzenia w formacie DD-MM-YYYY */
+    char address[200]; /**< Adres */
+    char phone[50]; /**< Numer telefonu */
+    char weight[200]; /**< Waga */
+    char height[200]; /**< Wzrost */
+    char nfz[200]; /**< NFZ */
 };
 
 //Struct representing patient Visits in database
 struct Visit {
-    int id;
-    char patientId[50];
-    char doctorId[50];
-    char date[50];
-    char time[50];
-    char duration[50];
-    char status[200];
+    int id; /**< Identyfikator */
+    char patientId[50]; /**< Identyfikator pacjenta */
+    char doctorId[50]; /**< Identyfikator lekarza */
+    char date[50]; /**< Data urodzenia w formacie DD-MM-YYYY */
+    char time[50]; /**< Godzina wizyty w formacie GG:MM */
+    char duration[50]; /**< Czas trwania wizyty w formacie GG:MM */
+    char status[200]; /**< Status wizyty */
 };
 
-
+/*!
+ * Zmienna pomocnicza z aktualnym lekarzem
+ */
 struct Doctor doc;
 
+/*!
+ * Zmienna pomocnicza z aktualnym pacjentem
+ */
 struct Patient pat;
 
+
+/*!
+ * Zmienna pomocnicza z aktualna wizyta
+ */
 struct Visit vis;
 
+/*!
+ * Wyswietlenie wszystkich pacjentow
+ * @note konsolowe GUI
+ */
 void choicePatientList() {
     printf("\n");
         const char *table;
@@ -69,6 +86,10 @@ void choicePatientList() {
 
 }
 
+/*!
+ * Wyswietlenie wszystkich lekarzy
+ * @note konsolowe GUI
+ */
 void choiceDoctorList() {
     printf("\n");
     const char *table;
@@ -82,6 +103,10 @@ void choiceDoctorList() {
 
 }
 
+/*!
+ * Dodanie lekarza
+ * @note konsolowe GUI
+ */
 void choiceAddDoctor() {
     /* Narazie zahardkodowane, domyœlnie nale¿y pobraæ te wartoœci od u¿ytkownika */
     char name[200];
@@ -130,6 +155,10 @@ void choiceAddDoctor() {
     printf("\n\n");
 }
 
+/*!
+ * Dodanie pacjenta
+ * @note konsolowe GUI
+ */
 void choiceAddPatient() {
     char name[200];
     char secondName[200];
@@ -181,6 +210,10 @@ void choiceAddPatient() {
     printf("\n\n");
 }
 
+/*!
+ * Usuniêcie pacjenta
+ * @note konsolowe GUI
+ */
 void choiceDeletePatient() {
     printf("\nPodaj id pacjenta:\n");
     char id[50];
@@ -191,6 +224,10 @@ void choiceDeletePatient() {
     printf("\nUsunieto pacjenta\n\n");
 }
 
+/*!
+ * Usuniêcie lekarza
+ * @note konsolowe GUI
+ */
 void choiceDeleteDoctor() {
     printf("\nPodaj id lekarza:\n");
     char id[50];
@@ -201,6 +238,11 @@ void choiceDeleteDoctor() {
     printf("\nUsunieto lekarza\n\n");
 }
 
+
+/*!
+ * Wyœwietlenie pacjenta
+ * @note konsolowe GUI
+ */
 void choiceShowPatient() {
     printf("\nPodaj id pacjenta:\n");
     char id[50];
@@ -219,6 +261,10 @@ void choiceShowPatient() {
 
 }
 
+/*!
+ * Wyœwietlenie lekarza
+ * @note konsolowe GUI
+ */
 void choiceShowDoctor() {
     printf("\nPodaj id lekarza:\n");
     char id[50];
@@ -237,6 +283,10 @@ void choiceShowDoctor() {
 
 }
 
+/*!
+ * Edycja pacjenta
+ * @note konsolowe GUI
+ */
 void choiceEditPatient() {
     printf("\nPodaj id pacjenta:\n");
     char id[50];
@@ -329,6 +379,10 @@ void choiceEditPatient() {
     updatePatientById(id, myPatient); //
 }
 
+/*!
+ * Edycja lekarza
+ * @note konsolowe GUI
+ */
 void choiceEditDoctor() {
     printf("\nPodaj id lekarza:\n");
     char id[50];
@@ -412,7 +466,10 @@ void choiceEditDoctor() {
     updateDoctorById(id, myDoctor); //
 }
 
-
+/*!
+ * Wybor akcji na tabeli lekarzy
+ * @note konsolowe GUI
+ */
 void choiceActionDoctor() {
     printf("\nWybierz akcje ktora chcesz wykonac\n");
     printf("\n1.Dodaj lekarza");
@@ -456,6 +513,10 @@ void choiceActionDoctor() {
     }
 }
 
+/*!
+ * Wybor akcji na tabeli pacjenta
+ * @note konsolowe GUI
+ */
 void choiceActionPatient() {
 
     printf("\nWybierz akcje ktora chcesz wykonac\n");
@@ -502,6 +563,10 @@ void choiceActionPatient() {
     }
 }
 
+/*!
+ * Wybor sekcji
+ * @note konsolowe GUI
+ */
 void choiceActionTable() {
     printf("\nWybierz akcje ktora chcesz wykonac\n\n");
     printf("\n1.Sekcja Pacjenta");
@@ -524,6 +589,11 @@ void choiceActionTable() {
     }
 }
 
+
+/*!
+ * Funckja g³ówna
+ * @note Wywo³anie w petli funkcji wyboru sekcji
+ */
 int main() {
     printf("Hello, Przychodnio!\n");
     while(1) {

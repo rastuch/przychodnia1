@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>przychodnia: Dokumentacja pliku visits.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">przychodnia
+   </div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('visits_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Struktury danych</a> &#124;
+<a href="#func-members">Funkcje</a> &#124;
+<a href="#var-members">Zmienne</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku visits.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="visits_8h_source.html">visits.h</a>&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;sqlite3.h&quot;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Struktury danych</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_visit.html">Visit</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struktura reprezentujaca tabele Wizyt w bazie danych.  <a href="struct_visit.html#details">Więcej...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a77d1f8fa4b15985a5e8cc3624526e570"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="visits_8c.html#a77d1f8fa4b15985a5e8cc3624526e570">deleteVisitById</a> (char id[50])</td></tr>
+<tr class="separator:a77d1f8fa4b15985a5e8cc3624526e570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2f09d8affe4815c93078cc7c8b8ac5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="visits_8c.html#aa2f09d8affe4815c93078cc7c8b8ac5a">updateVisitById</a> (char id[50], struct <a class="el" href="struct_visit.html">Visit</a> newVisit)</td></tr>
+<tr class="separator:aa2f09d8affe4815c93078cc7c8b8ac5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a804973767560211b3a65c5a08700be9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="visits_8c.html#a804973767560211b3a65c5a08700be9f">addVisit</a> (struct <a class="el" href="struct_visit.html">Visit</a> newVisit)</td></tr>
+<tr class="separator:a804973767560211b3a65c5a08700be9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ca6dfd128369946a0bb531cdf23ca9"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_visit.html">Visit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="visits_8c.html#ae0ca6dfd128369946a0bb531cdf23ca9">getVisitById</a> (char id[50])</td></tr>
+<tr class="separator:ae0ca6dfd128369946a0bb531cdf23ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a139788e3f9132a81a23a1326ec667fe5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="visits_8c.html#a139788e3f9132a81a23a1326ec667fe5">showAllVisits</a> ()</td></tr>
+<tr class="separator:a139788e3f9132a81a23a1326ec667fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafef6bbcdc7ddcc9c521e38dd68628fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="visits_8c.html#aafef6bbcdc7ddcc9c521e38dd68628fd">insertVisitData</a> ()</td></tr>
+<tr class="separator:aafef6bbcdc7ddcc9c521e38dd68628fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Zmienne</h2></td></tr>
+<tr class="memitem:a03497abfb06514a79dfd15ce519f5c97"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_visit.html">Visit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="visits_8c.html#a03497abfb06514a79dfd15ce519f5c97">visit</a></td></tr>
+<tr class="separator:a03497abfb06514a79dfd15ce519f5c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f2a4d8343c52785a1e973c154cfacff"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_visit.html">Visit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="visits_8c.html#a5f2a4d8343c52785a1e973c154cfacff">emptyVisit</a></td></tr>
+<tr class="separator:a5f2a4d8343c52785a1e973c154cfacff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="a804973767560211b3a65c5a08700be9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a804973767560211b3a65c5a08700be9f">&#9670;&nbsp;</a></span>addVisit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addVisit </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_visit.html">Visit</a>&#160;</td>
+          <td class="paramname"><em>newVisit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Funkcja dodajaca wizyte do bazy przyjmujaca za argument strukture "Visit" </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newPatient</td><td>zmienna zwierajaca strukture "Visit" do zapisania </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a77d1f8fa4b15985a5e8cc3624526e570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77d1f8fa4b15985a5e8cc3624526e570">&#9670;&nbsp;</a></span>deleteVisitById()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void deleteVisitById </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>id</em>[50]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Funkcja usuwająca wizyte z bazy przyjmująca za argument id </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>identyfikator wizyty do usunięcia @retrun void </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae0ca6dfd128369946a0bb531cdf23ca9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0ca6dfd128369946a0bb531cdf23ca9">&#9670;&nbsp;</a></span>getVisitById()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_visit.html">Visit</a> getVisitById </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>id</em>[50]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Funkcja zwracająca strukture <a class="el" href="struct_visit.html" title="Struktura reprezentujaca tabele Wizyt w bazie danych.">Visit</a> z bazy danych na podstawie podanego parametru id</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>identyfikator wizyty do wyswietlenia </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="aafef6bbcdc7ddcc9c521e38dd68628fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafef6bbcdc7ddcc9c521e38dd68628fd">&#9670;&nbsp;</a></span>insertVisitData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int insertVisitData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a139788e3f9132a81a23a1326ec667fe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a139788e3f9132a81a23a1326ec667fe5">&#9670;&nbsp;</a></span>showAllVisits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void showAllVisits </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Funkcja wyswietla listę wszystkich lekarzy</p>
+<dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="aa2f09d8affe4815c93078cc7c8b8ac5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2f09d8affe4815c93078cc7c8b8ac5a">&#9670;&nbsp;</a></span>updateVisitById()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void updateVisitById </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>id</em>[50], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="struct_visit.html">Visit</a>&#160;</td>
+          <td class="paramname"><em>newVisit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Funkcja aktualizujaca wizyte w bazie, przyjmuje za argumeny id uzytkownika oraz strukture <a class="el" href="struct_visit.html" title="Struktura reprezentujaca tabele Wizyt w bazie danych.">Visit</a> jako obiekt do ktorego ma zostac zaktualizowany</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>identyfikator wizyty do zaktualizowania </td></tr>
+    <tr><td class="paramname">newVisit</td><td>zmienna zwierajaca strukture "Visit" do zaktualizowania </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja zmiennych</h2>
+<a id="a5f2a4d8343c52785a1e973c154cfacff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f2a4d8343c52785a1e973c154cfacff">&#9670;&nbsp;</a></span>emptyVisit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_visit.html">Visit</a> emptyVisit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Zmienna pomocnicza z wizyta o pustych wartosciach </p>
+
+</div>
+</div>
+<a id="a03497abfb06514a79dfd15ce519f5c97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03497abfb06514a79dfd15ce519f5c97">&#9670;&nbsp;</a></span>visit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_visit.html">Visit</a> visit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Zmienna z aktualna wizyta </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="visits_8c.html">visits.c</a></li>
+    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

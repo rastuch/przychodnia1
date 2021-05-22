@@ -8,17 +8,28 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+
+/**
+ * Struktura reprezentujaca tabele Wizyt w bazie danych
+  */
 struct Visit {
-    int id;
-    char patientId[50];
-    char doctorId[50];
-    char date[50];
-    char time[50];
-    char duration[50];
-    char status[200];
+    int id; /**< Identyfikator */
+    char patientId[50]; /**< Identyfikator pacjenta */
+    char doctorId[50]; /**< Identyfikator lekarza */
+    char date[50]; /**< Data urodzenia w formacie DD-MM-YYYY */
+    char time[50]; /**< Godzina wizyty w formacie GG:MM */
+    char duration[50]; /**< Czas trwania wizyty w formacie GG:MM */
+    char status[200]; /**< Status wizyty */
 };
 
+/*!
+ * Zmienna z aktualna wizyta
+ */
 struct Visit visit;
+
+/*!
+ * Zmienna pomocnicza z wizyta o pustych wartosciach
+ */
 struct Visit emptyVisit;
 
 static int callback(void *data, int argc, char **argv, char **azColName) {
@@ -26,7 +37,11 @@ static int callback(void *data, int argc, char **argv, char **azColName) {
     return 0;
 }
 
-/* Funkcja usuwająca wizyte z bazy przyjmująca za argument id */
+/*!
+ * Funkcja usuwająca wizyte z bazy przyjmująca za argument id
+ * @param id identyfikator wizyty do usunięcia
+ * @retrun void
+*/
 void deleteVisitById(char id[50]) {
     sqlite3 *db;
     char *zErrMsg = 0;
@@ -61,8 +76,14 @@ void deleteVisitById(char id[50]) {
 }
 
 
-/* Funkcja aktualizujaca wizyte w bazie, przyjmuje za argumeny id użytkownika oraz strukture Visit
- * jako obiekt do ktorego ma zostac zaktualizowany */
+/*!
+ * Funkcja aktualizujaca wizyte w bazie, przyjmuje za argumeny id uzytkownika oraz strukture Visit
+ * jako obiekt do ktorego ma zostac zaktualizowany
+ *
+ * @param id identyfikator wizyty do zaktualizowania
+ * @param newVisit zmienna zwierajaca strukture "Visit" do zaktualizowania
+ * @return void
+*/
 void updateVisitById(char id[50], struct Visit newVisit) {
     sqlite3 *db;
     char *zErrMsg = 0;
@@ -102,7 +123,11 @@ void updateVisitById(char id[50], struct Visit newVisit) {
 }
 
 
-/* Funkcja dodająca pacjenta do bazy przyjmująca za argument strukture "visit" */
+/*!
+ * Funkcja dodajaca wizyte do bazy przyjmujaca za argument strukture "Visit"
+ * @param newPatient zmienna zwierajaca strukture "Visit" do zapisania
+ * @return void
+*/
 void addVisit(struct Visit newVisit) {
     sqlite3 *db;
     char *zErrMsg = 0;
@@ -140,7 +165,12 @@ void addVisit(struct Visit newVisit) {
 }
 
 
-/* Funkcja wywołania zwrotnego przypisujaca informacje z bazy danych do stuktury visit */
+/*!
+ *Funkcja wywołania zwrotnego przypisujaca informacje z bazy danych do stuktury visit
+ *
+ *
+ * @return int
+*/
 static int cbGetVisit(void *data, int argc, char **argv, char **colName) {
 
     /* Funkcja korzysta ze zmiennej globalnej "patient" więc wymaga upewnienia się że jest pusta
@@ -155,7 +185,12 @@ static int cbGetVisit(void *data, int argc, char **argv, char **colName) {
     return 0;
 }
 
-/* Funkcja zwracająca strukture wizyte z bazy danych na podstawie podanego parametru id */
+/*!
+ *Funkcja zwracająca strukture Visit z bazy danych na podstawie podanego parametru id
+ *
+ * @param id identyfikator wizyty do wyswietlenia
+ * @return void
+*/
 struct Visit getVisitById(char id[50]) {
     sqlite3 *db;
     char *zErrMsg = 0;
@@ -190,7 +225,11 @@ struct Visit getVisitById(char id[50]) {
 }
 
 
-/* Funkcja wywołania zwrotnego wyświetlająca liste wszystkich wizyt */
+/*!
+ *Funkcja wywolania zwrotnego wswietlajaca liste wizyt
+ *
+ * @return int
+*/
 static int cbShowAllVisits(void *NotUsed, int argc, char **argv, char **azColName) {
     int i;
     for (i = 0; i < argc; i++) {
@@ -201,7 +240,12 @@ static int cbShowAllVisits(void *NotUsed, int argc, char **argv, char **azColNam
     return 0;
 }
 
-/* Funkcja wyświetla listę wszystkich wizyt */
+/*!
+*Funkcja wyswietla listę wszystkich lekarzy
+*
+*
+* @return void
+*/
 void showAllVisits() {
     sqlite3 *db;
     char *zErrMsg = 0;

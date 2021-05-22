@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>przychodnia: Dokumentacja pliku doctors.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">przychodnia
+   </div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('doctors_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Struktury danych</a> &#124;
+<a href="#func-members">Funkcje</a> &#124;
+<a href="#var-members">Zmienne</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku doctors.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="doctors_8h_source.html">doctors.h</a>&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;sqlite3.h&quot;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Struktury danych</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_doctor.html">Doctor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struktura reprezentujaca tabele Lekarza w bazie danych.  <a href="struct_doctor.html#details">WiÄ™cej...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a40095c6b0d3db2166dbe527ea023900a"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctors_8c.html#a40095c6b0d3db2166dbe527ea023900a">columnNameDoctorChoice</a> ()</td></tr>
+<tr class="separator:a40095c6b0d3db2166dbe527ea023900a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea8b1ec2d1126cdd50bbf517a59c4373"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctors_8c.html#aea8b1ec2d1126cdd50bbf517a59c4373">sortDoctorOrder</a> ()</td></tr>
+<tr class="separator:aea8b1ec2d1126cdd50bbf517a59c4373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a779f6c2ab0772c6677298e31638d7534"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctors_8c.html#a779f6c2ab0772c6677298e31638d7534">deleteDoctorById</a> (char id[50])</td></tr>
+<tr class="separator:a779f6c2ab0772c6677298e31638d7534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14108422b46dfd2a9b795829403546dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctors_8c.html#a14108422b46dfd2a9b795829403546dd">updateDoctorById</a> (char id[50], struct <a class="el" href="struct_doctor.html">Doctor</a> newDoctor)</td></tr>
+<tr class="separator:a14108422b46dfd2a9b795829403546dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61e7be2a6b993f220fa85cc405a17ed1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctors_8c.html#a61e7be2a6b993f220fa85cc405a17ed1">addDoctor</a> (struct <a class="el" href="struct_doctor.html">Doctor</a> newDoctor)</td></tr>
+<tr class="separator:a61e7be2a6b993f220fa85cc405a17ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9aead3ab0c4557ca0bbf34e3167519c"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_doctor.html">Doctor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctors_8c.html#ac9aead3ab0c4557ca0bbf34e3167519c">getDoctorById</a> (char id[50])</td></tr>
+<tr class="separator:ac9aead3ab0c4557ca0bbf34e3167519c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2612e1e8ca56323c8c74a2fccab13c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctors_8c.html#ae2612e1e8ca56323c8c74a2fccab13c3">showAllDoctors</a> (char sortByTableName[], char sortOrder[])</td></tr>
+<tr class="separator:ae2612e1e8ca56323c8c74a2fccab13c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd8482e8c68d0dee88a9065fac7f80f6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctors_8c.html#abd8482e8c68d0dee88a9065fac7f80f6">insertDataDoctors</a> ()</td></tr>
+<tr class="separator:abd8482e8c68d0dee88a9065fac7f80f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Zmienne</h2></td></tr>
+<tr class="memitem:a8f55d54045543527099a15d0899e9ec4"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_doctor.html">Doctor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctors_8c.html#a8f55d54045543527099a15d0899e9ec4">doctor</a></td></tr>
+<tr class="separator:a8f55d54045543527099a15d0899e9ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27e8be71419842d6b082fcc1ac733fd7"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_doctor.html">Doctor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctors_8c.html#a27e8be71419842d6b082fcc1ac733fd7">emptyDoctor</a></td></tr>
+<tr class="separator:a27e8be71419842d6b082fcc1ac733fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="a61e7be2a6b993f220fa85cc405a17ed1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61e7be2a6b993f220fa85cc405a17ed1">&#9670;&nbsp;</a></span>addDoctor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addDoctor </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_doctor.html">Doctor</a>&#160;</td>
+          <td class="paramname"><em>newDoctor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Funkcja dodajaca lekarza do bazy przyjmujaca za argument strukture "patient" </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newPatient</td><td>zmienna zwierajaca strukture "doctor" do zapisania </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a40095c6b0d3db2166dbe527ea023900a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40095c6b0d3db2166dbe527ea023900a">&#9670;&nbsp;</a></span>columnNameDoctorChoice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* columnNameDoctorChoice </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Funkcja pozwaljaca ustalic rodzaj wedlug jakiej kolumny ma zostac posortowane wyniki</p>
+<dl class="section return"><dt>Zwraca</dt><dd>char* wskaznik z tablica charow okreslajaca nazwe tabeli w bazie danych </dd></dl>
+
+</div>
+</div>
+<a id="a779f6c2ab0772c6677298e31638d7534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a779f6c2ab0772c6677298e31638d7534">&#9670;&nbsp;</a></span>deleteDoctorById()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void deleteDoctorById </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>id</em>[50]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Funkcja usuwaj¹ca lekarza z bazy przyjmuj¹ca za argument id </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>identyfikator u¿ytkownika do usuniêcia @retrun void </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac9aead3ab0c4557ca0bbf34e3167519c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9aead3ab0c4557ca0bbf34e3167519c">&#9670;&nbsp;</a></span>getDoctorById()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_doctor.html">Doctor</a> getDoctorById </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>id</em>[50]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Funkcja zwracaj¹ca strukture doctor z bazy danych na podstawie podanego parametru id</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>identyfikator lekarza do wyswietlenia </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="abd8482e8c68d0dee88a9065fac7f80f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd8482e8c68d0dee88a9065fac7f80f6">&#9670;&nbsp;</a></span>insertDataDoctors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int insertDataDoctors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae2612e1e8ca56323c8c74a2fccab13c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2612e1e8ca56323c8c74a2fccab13c3">&#9670;&nbsp;</a></span>showAllDoctors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void showAllDoctors </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>sortByTableName</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>sortOrder</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Funkcja wyswietla listê wszystkich lekarzy</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sortByColumnName</td><td>nazwa columny wedlug ktorej maja zostac posortowane wyniki </td></tr>
+    <tr><td class="paramname">sortOrder</td><td>rodzaj sortowania </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="aea8b1ec2d1126cdd50bbf517a59c4373"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea8b1ec2d1126cdd50bbf517a59c4373">&#9670;&nbsp;</a></span>sortDoctorOrder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* sortDoctorOrder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Funkcja pozwaljaca ustalic rodzaj sortowania (malejacy/rosnacy)</p>
+<dl class="section return"><dt>Zwraca</dt><dd>char* wskaznik z tablica charow okreslajaca rodzaj sortowania </dd></dl>
+
+</div>
+</div>
+<a id="a14108422b46dfd2a9b795829403546dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14108422b46dfd2a9b795829403546dd">&#9670;&nbsp;</a></span>updateDoctorById()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void updateDoctorById </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>id</em>[50], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="struct_doctor.html">Doctor</a>&#160;</td>
+          <td class="paramname"><em>newDoctor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Funkcja aktualizujaca lekarza w bazie, przyjmuje za argumeny id uzytkownika oraz strukture <a class="el" href="struct_doctor.html" title="Struktura reprezentujaca tabele Lekarza w bazie danych.">Doctor</a> jako obiekt do ktorego ma zostac zaktualizowany</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>identyfikator pacjenta do zaktualizowania </td></tr>
+    <tr><td class="paramname">newDoctor</td><td>zmienna zwierajaca strukture "doctor" do zaktualizowania </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja zmiennych</h2>
+<a id="a8f55d54045543527099a15d0899e9ec4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f55d54045543527099a15d0899e9ec4">&#9670;&nbsp;</a></span>doctor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_doctor.html">Doctor</a> doctor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Zmienna z aktualnym lekarzem </p>
+
+</div>
+</div>
+<a id="a27e8be71419842d6b082fcc1ac733fd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27e8be71419842d6b082fcc1ac733fd7">&#9670;&nbsp;</a></span>emptyDoctor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_doctor.html">Doctor</a> emptyDoctor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Zmienna pomocnicza z lekarzem o pustych wartosciach </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="doctors_8c.html">doctors.c</a></li>
+    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

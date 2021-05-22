@@ -7,19 +7,30 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * Struktura reprezentujaca tabele Pcjenta w bazie danych
+  */
 struct Patient {
-    char name[200];
-    char secondName[200];
-    char pesel[50];
-    char birthDate[200];
-    char address[200];
-    char email[200];
-    char phone[50];
-    char weight[200];
-    char height[200];
-    char nfz[200];
+    /*@{*/
+    char name[200]; /**< Imie */
+    char secondName[200]; /**< Nazwisko */
+    char pesel[50]; /**< Numer pesel jako tablia znakow */
+    char birthDate[200]; /**< data urodzenia w formacje DD-MM-YYYY */
+    char address[200]; /**< Adres */
+    char email[200]; /**< Email */
+    char phone[50]; /**< Numer telefonu */
+    char weight[200]; /**< Waga w kg */
+    char height[200]; /**< Wzrost w cm */
+    char nfz[200]; /**< NFZ */
+    /*@{*/
 };
 
+/*!
+ * Funkcja pozwaljaca ustalic rodzaj wedlug jakiej kolumny ma zostac posortowane wyniki
+ *
+ *
+ * @return char* wskaznik z tablica charow okreslajaca nazwe tabeli w bazie danych
+*/
 const char* columnNamePatientChoice() {
     int choiceNumber;
     printf("\n1.ID 2.Imie 3.Nazwisko 4.Pesel, 5.Data urodzenia 6.Adress\n7.Email 8.Telefon 9.Waga 10.Wzrost 11.NFZ");
@@ -76,7 +87,12 @@ const char* columnNamePatientChoice() {
       }
    }
 }
-
+/*!
+ * Funkcja pozwaljaca ustalic rodzaj sortowania (malejacy/rosnacy)
+ *
+ *
+ * @return char* wskaznik z tablica charow okreslajaca rodzaj sortowania
+*/
 const char* sortPatientOrder() {
     int choiceNumber;
     printf("\nPodaj numer sortowania :\n");
@@ -100,11 +116,21 @@ const char* sortPatientOrder() {
 
 
 
-
+/*!
+ * Zmienna z aktualnym pacjentem
+ */
 struct Patient patient;
+
+/*!
+ * Zmienna pomocnicza z pacjentem o pustych wartosciach
+ */
 struct Patient emptyPatient;
 
-
+/*!
+ * Domyslna funkcja wywolania zwrotnego uzywana uzyskania informacji o poprawnym odczytaniu danych z bazy
+ *
+ * @return int
+*/
 static int callback(void *data, int argc, char **argv, char **azColName) {
     printf("All good\n");
     return 0;
@@ -150,9 +176,9 @@ void deletePatientById(char id[50]) {
 
 
 /*!
- * Funkcja dodaj¹ca pacjenta do bazy przyjmuj¹ca za argument strukture "patient"
- * @param newPatient zmienna zwieraj¹ca strukture "patient" do zapisania
- * @retrun void
+ * Funkcja dodajaca pacjenta do bazy przyjmujaca za argument strukture "patient"
+ * @param newPatient zmienna zwierajaca strukture "patient" do zapisania
+ * @return void
 */
 void addPatient(struct Patient newPatient) {
     sqlite3 *db;
@@ -193,8 +219,16 @@ void addPatient(struct Patient newPatient) {
 }
 
 
-/* Funkcja aktualizujaca pacjenta w bazie, przyjmuje za argumeny id u¿ytkownika oraz strukture Patient
- * jako obiekt do ktorego ma zostac zaktualizowany */
+/*
+ *  */
+/*!
+ * Funkcja aktualizujaca pacjenta w bazie, przyjmuje za argumeny id uzytkownika oraz strukture Patient
+ * jako obiekt do ktorego ma zostac zaktualizowany
+ *
+ * @param id identyfikator pacjenta do zaktualizowania
+ * @param newPatient zmienna zwierajaca strukture "patient" do zaktualizowania
+ * @return void
+*/
 void updatePatientById(char id[50], struct Patient newPatient) {
     sqlite3 *db;
     char *zErrMsg = 0;
@@ -236,8 +270,12 @@ void updatePatientById(char id[50], struct Patient newPatient) {
     sqlite3_close(db);
 }
 
-
-/* Funkcja wywo³ania zwrotnego przypisujaca informacje z bazy danych do stuktury pacjent */
+/*!
+ *Funkcja wywo³ania zwrotnego przypisujaca informacje z bazy danych do stuktury pacjent
+ *
+ *
+ * @return int
+*/
 static int cbGetPatient(void *data, int argc, char **argv, char **colName) {
 
     /* Funkcja korzysta ze zmiennej globalnej "patient" wiêc wymaga upewnienia siê ¿e jest pusta
@@ -257,7 +295,12 @@ static int cbGetPatient(void *data, int argc, char **argv, char **colName) {
 }
 
 
-/* Funkcja zwracaj¹ca strukture patient z bazy danych na podstawie podanego parametru id */
+/*!
+ *Funkcja zwracaj¹ca strukture patient z bazy danych na podstawie podanego parametru id
+ *
+ * @param id identyfikator pacjenta do wyswietlenia
+ * @return void
+*/
 struct Patient getPatientById(char id[50]) {
     sqlite3 *db;
     char *zErrMsg = 0;
@@ -292,7 +335,11 @@ struct Patient getPatientById(char id[50]) {
 }
 
 
-/* Funkcja wywo³ania zwrotnego wyœwietlaj¹ca liste wszystkich pacjentów */
+/*!
+ *Funkcja wywolania zwrotnego wswietlajaca liste pacjentow
+ *
+ * @return int
+*/
 static int cbShowAllPatients(void *NotUsed, int argc, char **argv, char **azColName) {
     int i;
     for (i = 0; i < argc; i++) {
@@ -303,8 +350,15 @@ static int cbShowAllPatients(void *NotUsed, int argc, char **argv, char **azColN
     return 0;
 }
 
-/* Funkcja wyœwietla listê wszystkich pacjentów */
-void showAllpatients(char sortByTableName[], char sortOrder[]) {
+
+/*!
+ *Funkcja wyœwietla listê wszystkich pacjentów
+ *
+ * @param sortByColumnName nazwa columny wedlug ktorej maja zostac posortowane wyniki
+ * @param sortOrder rodzaj sortowania
+ * @return void
+*/
+void showAllpatients(char sortByColumnName[], char sortOrder[]) {
     sqlite3 *db;
     char *zErrMsg = 0;
     int rc;
@@ -325,7 +379,7 @@ void showAllpatients(char sortByTableName[], char sortOrder[]) {
 
     snprintf(setData, sizeof(setData),
             "%s%s %s",
-            sql,sortByTableName,sortOrder);
+            sql,sortByColumnName,sortOrder);
 
     /* Execute SQL statement */
     rc = sqlite3_exec(db, setData, cbShowAllPatients, (void *) data, &zErrMsg);
@@ -341,9 +395,13 @@ void showAllpatients(char sortByTableName[], char sortOrder[]) {
 
 
 
-//Insert data i callback to funkcje pomocnicze do uzupe³niania tabeli
+//
 
-
+/*!
+ *Insert data i callback to funkcje pomocnicze do uzupe³niania tabeli
+ *
+ * @return void
+*/
 int insertData() {
     sqlite3 *db;
     char *zErrMsg = 0;
