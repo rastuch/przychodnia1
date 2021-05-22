@@ -111,7 +111,7 @@ static int callback(void *data, int argc, char **argv, char **azColName) {
 }
 
 /*!
- * @brief Funkcja usuwaj¹ca pacjenta z bazy przyjmuj¹ca za argument id
+ * Funkcja usuwaj¹ca pacjenta z bazy przyjmuj¹ca za argument id
  * @param id identyfikator u¿ytkownika do usuniêcia
  * @retrun void
 */
@@ -148,7 +148,12 @@ void deletePatientById(char id[50]) {
     sqlite3_close(db);
 }
 
-/* Funkcja dodaj¹ca pacjenta do bazy przyjmuj¹ca za argument strukture "patient" */
+
+/*!
+ * Funkcja dodaj¹ca pacjenta do bazy przyjmuj¹ca za argument strukture "patient"
+ * @param newPatient zmienna zwieraj¹ca strukture "patient" do zapisania
+ * @retrun void
+*/
 void addPatient(struct Patient newPatient) {
     sqlite3 *db;
     char *zErrMsg = 0;
