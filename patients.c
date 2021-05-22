@@ -110,10 +110,11 @@ static int callback(void *data, int argc, char **argv, char **azColName) {
     return 0;
 }
 
-/* Funkcja usuwaj¹ca pacjenta z bazy przyjmuj¹ca za argument id
- * @param id identyfikator pacjent do usuniêcia
- *
- * */
+/*!
+ * @brief Funkcja usuwaj¹ca pacjenta z bazy przyjmuj¹ca za argument id
+ * @param id identyfikator u¿ytkownika do usuniêcia
+ * @retrun void
+*/
 void deletePatientById(char id[50]) {
     sqlite3 *db;
     char *zErrMsg = 0;
