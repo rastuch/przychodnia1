@@ -7,6 +7,10 @@
 
 int insertDataDoctors();
 
+const char* columnNameDoctorChoice();
+
+const char* sortDoctorOrder();
+
 void showAllDoctors();
 
 struct Doctor getDoctorById(char id[50]);

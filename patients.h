@@ -9,6 +9,10 @@
 
 struct Patient getPatientObject();
 
+const char* columnNamePatientChoice();
+
+const char* sortPatientOrder();
+
 void addPatient(struct Patient newPatient);
 
 struct Patient getPatientById(char id[50]);

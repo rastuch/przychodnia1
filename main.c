@@ -6,6 +6,7 @@
 #include "doctors.h"
 #include "visits.h"
 
+//Struct representing patient table in database
 struct Patient {
     char name[200];
     char secondName[200];
@@ -19,6 +20,7 @@ struct Patient {
     char nfz[200];
 };
 
+//Struct representing doctor table in database
 struct Doctor {
     int id;
     char name[200];
@@ -36,6 +38,7 @@ struct Doctor {
     char nfz[200];
 };
 
+//Struct representing patient Visits in database
 struct Visit {
     int id;
     char patientId[50];
@@ -55,17 +58,25 @@ struct Visit vis;
 
 void choicePatientList() {
     printf("\n");
+        const char *table;
+        table = columnNamePatientChoice();
+        const char *order;
+        order = sortPatientOrder();
 
-    showAllpatients(); // funkcja odow³uj¹ca siê do bazy
+        showAllpatients(table, order); // funkcja odow³uj¹ca siê do bazy
 
-    printf("\n\n");
+        printf("\n\n");
 
 }
 
 void choiceDoctorList() {
     printf("\n");
+    const char *table;
+    table = columnNameDoctorChoice();
+    const char *order;
+    order = sortDoctorOrder();
 
-    showAllDoctors(); // funkcja odow³uj¹ca siê do bazy
+    showAllDoctors(table, order); // funkcja odow³uj¹ca siê do bazy
 
     printf("\n\n");
 
@@ -120,7 +131,6 @@ void choiceAddDoctor() {
 }
 
 void choiceAddPatient() {
-    /* Narazie zahardkodowane, domyœlnie nale¿y pobraæ te wartoœci od u¿ytkownika */
     char name[200];
     char secondName[200];
     char pesel[50];
@@ -344,7 +354,7 @@ void choiceEditDoctor() {
         scanf("%s", name);
         strcpy(myDoctor.name, name);
     }
-    printf("Czy chcesz zmienic nazwisko pacjenta?  1 - tak, 0 - nie\n");
+    printf("Czy chcesz zmienic nazwisko lekarza?  1 - tak, 0 - nie\n");
 
     scanf("%i", &choice);
     if (choice == 1) {
@@ -353,7 +363,7 @@ void choiceEditDoctor() {
         scanf("%s", secondName);
         strcpy(myDoctor.secondName, secondName);
     }
-    printf("Czy chcesz zmienic pesel pacjenta?  1 - tak, 0 - nie\n");
+    printf("Czy chcesz zmienic pesel lekarza?  1 - tak, 0 - nie\n");
 
     scanf("%i", &choice);
     if (choice == 1) {
@@ -362,7 +372,7 @@ void choiceEditDoctor() {
         scanf("%s", pesel);
         strcpy(myDoctor.pesel, pesel);
     }
-    printf("Czy chcesz zmienic e-mail pacjenta?  1 - tak, 0 - nie\n");
+    printf("Czy chcesz zmienic e-mail lekarza?  1 - tak, 0 - nie\n");
 
     scanf("%i", &choice);
     if (choice == 1) {
@@ -371,7 +381,7 @@ void choiceEditDoctor() {
         scanf("%s", email);
         strcpy(myDoctor.email, email);
     }
-    printf("Czy chcesz zmienic numer telefonu pacjenta?  1 - tak, 0 - nie\n");
+    printf("Czy chcesz zmienic numer telefonu lekarza?  1 - tak, 0 - nie\n");
 
     scanf("%i", &choice);
     if (choice == 1) {
@@ -380,7 +390,7 @@ void choiceEditDoctor() {
         scanf("%s", phone);
         strcpy(myDoctor.phone, phone);
     }
-    printf("Czy chcesz zmienic wage pacjenta?  1 - tak, 0 - nie\n");
+    printf("Czy chcesz zmienic wage lekarza?  1 - tak, 0 - nie\n");
 
     scanf("%i", &choice);
     if (choice == 1) {
@@ -389,7 +399,7 @@ void choiceEditDoctor() {
         scanf("%s", weight);
         strcpy(myDoctor.weight, weight);
     }
-    printf("Czy chcesz zmienic wzrost pacjenta?  1 - tak, 0 - nie\n");
+    printf("Czy chcesz zmienic wzrost lekarza?  1 - tak, 0 - nie\n");
 
     scanf("%i", &choice);
     if (choice == 1) {

@@ -25,6 +25,97 @@ struct Doctor {
     char nfz[200];
 };
 
+const char* columnNameDoctorChoice() {
+    int choiceNumber;
+    printf("\n1.ID 2.Imie 3.Nazwisko 4.Pesel, 5.PWZ 6.Tytul\n7.Specjalizacja 8.Email 9.Data urodzenia 10.Adres 11.Telefon\n12.Waga 13.Wzrost 14.NFZ");
+    printf("\nPodaj numer columny wedlug ktorej chcesz posortowac wyniki:\n");
+    scanf("%i",&choiceNumber);
+    switch(choiceNumber) {
+        case 1: {
+            char *table = "id";
+            return table;
+        }
+        case 2: {
+            char *table = "name";
+            return table;
+        }
+        case 3: {
+            char *table = "secondName";
+            return table;
+        }
+        case 4: {
+            char *table = "pesel";
+            return table;
+        }
+        case 5: {
+            char *table = "pwzNumber";
+            return table;
+        }
+        case 6: {
+            char *table = "title";
+            return table;
+        }
+        case 7: {
+            char *table = "specialization";
+            return table;
+        }
+        case 8: {
+            char *table = "email";
+            return table;
+        }
+        case 9: {
+            char *table = "birthDate";
+            return table;
+        }
+        case 10: {
+            char *table = "address";
+            return table;
+        }
+        case 11: {
+            char *table = "phone";
+            return table;
+        }
+        case 12: {
+            char *table = "weight";
+            return table;
+        }
+        case 13: {
+            char *table = "height";
+            return table;
+        }
+        case 14: {
+            char *table = "nfz";
+            return table;
+        }
+        default: {
+            char *table = "id";
+            return table;
+        }
+    }
+}
+
+const char* sortDoctorOrder() {
+    int choiceNumber;
+    printf("\nPodaj numer sortowania :\n");
+    printf("\n1.Malejaco 2.Rosnaco\n");
+    scanf("%i",&choiceNumber);
+    switch (choiceNumber) {
+        case 1: {
+            char *order = "desc;";
+            return order;
+        }
+        case 2: {
+            char *order = "asc;";
+            return order;
+        }
+        default: {
+            char *order = "asc;";
+            return order;
+        }
+    }
+}
+
+
 static int callback(void *data, int argc, char **argv, char **azColName) {
     printf("All good\n");
     return 0;
@@ -220,7 +311,7 @@ static int cbShowAllPatients(void *NotUsed, int argc, char **argv, char **azColN
 }
 
 /* Funkcja wyœwietla listê wszystkich lekarzy */
-void showAllDoctors() {
+void showAllDoctors(char sortByTableName[], char sortOrder[]) {
     sqlite3 *db;
     char *zErrMsg = 0;
     int rc;
@@ -235,12 +326,16 @@ void showAllDoctors() {
     } else {
         //  fprintf(stderr, "Opened database successfully\n");
     }
-
+    char setData[5000];
     /* Create SQL statement */
-    sql = "SELECT * from doctors";
+    sql = "SELECT * from doctors order by ";
+
+    snprintf(setData, sizeof(setData),
+             "%s%s %s",
+             sql,sortByTableName,sortOrder);
 
     /* Execute SQL statement */
-    rc = sqlite3_exec(db, sql, cbShowAllPatients, (void *) data, &zErrMsg);
+    rc = sqlite3_exec(db, setData, cbShowAllPatients, (void *) data, &zErrMsg);
 
     if (rc != SQLITE_OK) {
         fprintf(stderr, "SQL error: %s\n", zErrMsg);
