@@ -31,6 +31,35 @@ struct Doctor {
 
 
 /*!
+ * Funkcja pomocnicza do konkatynacji tablic charow
+ *
+ * @param num_args liczba stringów do konkatynacji
+ *
+ * @return void
+*/
+char *strconcat1(int num_args, ...) {
+    int strsize = 0;
+    va_list ap;
+    va_start(ap, num_args);
+    for (int i = 0; i < num_args; i++)
+        strsize += strlen(va_arg(ap, char*));
+
+    char *res = malloc(strsize+1);
+    strsize = 0;
+    va_start(ap, num_args);
+    for (int i = 0; i < num_args; i++) {
+        char *s = va_arg(ap, char*);
+        strcpy(res+strsize, s);
+        strsize += strlen(s);
+    }
+    va_end(ap);
+    res[strsize] = '\0';
+
+    return res;
+}
+
+
+/*!
  * Funkcja pozwaljaca ustalic rodzaj wedlug jakiej kolumny ma zostac posortowane wyniki
  *
  *
@@ -365,6 +394,44 @@ static int cbShowAllPatients(void *NotUsed, int argc, char **argv, char **azColN
     printf("\n");
     return 0;
 }
+
+
+/*!
+ *Funkcja wyszukiwaj¹ca lekarza wedlug imienia i nazwiska
+ *
+ * @param nameOrSecondName imie lub nazwisko lekarza do wyszukania
+ * @return void
+*/
+void searchDoctors(char nameOrSecondName[100] ) {
+    sqlite3 *db;
+    char *zErrMsg = 0;
+    int rc;
+    char *sql;
+    const char *data = "Callback function called";
+
+    /* Open database */
+    rc = sqlite3_open("przychodnia.db", &db);
+
+    if (rc) {
+        fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
+    } else {
+        //  fprintf(stderr, "Opened database successfully\n");
+    }
+        sql = "test";
+    /* Create SQL statement */
+    sql = strconcat1(6, "SELECT * from doctors where name like '%%", nameOrSecondName,"%%' ",
+                    "OR secondName like '%%",nameOrSecondName,"%%'");
+    rc = sqlite3_exec(db, sql, cbShowAllPatients, (void *) data, &zErrMsg);
+
+    if (rc != SQLITE_OK) {
+        fprintf(stderr, "SQL error: %s\n", zErrMsg);
+        sqlite3_free(zErrMsg);
+    } else {
+        //   fprintf(stdout, "Operation done successfully\n");
+    }
+    sqlite3_close(db);
+}
+
 
 /*!
  *Funkcja wyswietla listê wszystkich lekarzy

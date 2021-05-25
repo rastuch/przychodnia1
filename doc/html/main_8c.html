@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>przychodnia: Dokumentacja pliku main.c</title>
+<title>Przychodnia: Dokumentacja pliku main.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,9 +29,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="stethoscope_no_sh_icon-icons.com_76245.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">przychodnia
+   <div id="projectname">Przychodnia
    </div>
+   <div id="projectbrief">Karol ChorzÄ™pa || Konrad GliÅ„ski || Karol GÃ³rnicki</div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -92,411 +94,39 @@ $(document).ready(function(){initNavTree('main_8c.html',''); initResizable(); })
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Struktury danych</a> &#124;
-<a href="#func-members">Funkcje</a> &#124;
-<a href="#var-members">Zmienne</a>  </div>
+<a href="#func-members">Funkcje</a>  </div>
   <div class="headertitle">
 <div class="title">Dokumentacja pliku main.c</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &quot;sqlite3.h&quot;</code><br />
-<code>#include &lt;string.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="patients_8h_source.html">patients.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="doctors_8h_source.html">doctors.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="visits_8h_source.html">visits.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="views_8h_source.html">views.h</a>&quot;</code><br />
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Struktury danych</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_patient.html">Patient</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struktura reprezentujaca tabele Pacjenta w bazie danych.  <a href="struct_patient.html#details">WiÄ™cej...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_doctor.html">Doctor</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struktura reprezentujaca tabele Lekarza w bazie danych.  <a href="struct_doctor.html#details">WiÄ™cej...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_visit.html">Visit</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struktura reprezentujaca tabele Wizyt w bazie danych.  <a href="struct_visit.html#details">WiÄ™cej...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funkcje</h2></td></tr>
-<tr class="memitem:a744d09fad253ffe7ab59857799332ecc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a744d09fad253ffe7ab59857799332ecc">choicePatientList</a> ()</td></tr>
-<tr class="separator:a744d09fad253ffe7ab59857799332ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b90e6aed1700f3590e21a7739433189"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a9b90e6aed1700f3590e21a7739433189">choiceDoctorList</a> ()</td></tr>
-<tr class="separator:a9b90e6aed1700f3590e21a7739433189"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a826f2ae646029af3d4a49840b9a174e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a826f2ae646029af3d4a49840b9a174e7">choiceAddDoctor</a> ()</td></tr>
-<tr class="separator:a826f2ae646029af3d4a49840b9a174e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1e693262521f1a3e3d3ee817324ca54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac1e693262521f1a3e3d3ee817324ca54">choiceAddPatient</a> ()</td></tr>
-<tr class="separator:ac1e693262521f1a3e3d3ee817324ca54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf724d5df270ebb88d6de88b4bfff2d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#adf724d5df270ebb88d6de88b4bfff2d8">choiceDeletePatient</a> ()</td></tr>
-<tr class="separator:adf724d5df270ebb88d6de88b4bfff2d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4955e81d263353bebe0900c94c86930c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a4955e81d263353bebe0900c94c86930c">choiceDeleteDoctor</a> ()</td></tr>
-<tr class="separator:a4955e81d263353bebe0900c94c86930c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c7c394f9c9c71004a15be06b04023e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a2c7c394f9c9c71004a15be06b04023e3">choiceShowPatient</a> ()</td></tr>
-<tr class="separator:a2c7c394f9c9c71004a15be06b04023e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48f22565b8a3d3490384e8ad2f955f47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a48f22565b8a3d3490384e8ad2f955f47">choiceShowDoctor</a> ()</td></tr>
-<tr class="separator:a48f22565b8a3d3490384e8ad2f955f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac99a0374cd57e9818f1471aa9b6a31be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac99a0374cd57e9818f1471aa9b6a31be">choiceEditPatient</a> ()</td></tr>
-<tr class="separator:ac99a0374cd57e9818f1471aa9b6a31be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfec9a8082b26835786fbb9c21f76559"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#acfec9a8082b26835786fbb9c21f76559">choiceEditDoctor</a> ()</td></tr>
-<tr class="separator:acfec9a8082b26835786fbb9c21f76559"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a155db86fcde4921bdd3a5704d870a55c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a155db86fcde4921bdd3a5704d870a55c">choiceVisitList</a> ()</td></tr>
-<tr class="separator:a155db86fcde4921bdd3a5704d870a55c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb3b06bfb70d2d06fdc0f49f4c681e7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#adb3b06bfb70d2d06fdc0f49f4c681e7b">choiceAddVisit</a> ()</td></tr>
-<tr class="separator:adb3b06bfb70d2d06fdc0f49f4c681e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa6135b0afef86220295c3578a4c4e6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aaa6135b0afef86220295c3578a4c4e6b">choiceUpdateVisitById</a> ()</td></tr>
-<tr class="separator:aaa6135b0afef86220295c3578a4c4e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ded695580a58850c7de3b0a790fb011"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a7ded695580a58850c7de3b0a790fb011">choiceDeleteVisitById</a> ()</td></tr>
-<tr class="separator:a7ded695580a58850c7de3b0a790fb011"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a168f57a7fc5c34d3ece2c3dff87b2d41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a168f57a7fc5c34d3ece2c3dff87b2d41">choiceActionDoctor</a> ()</td></tr>
-<tr class="separator:a168f57a7fc5c34d3ece2c3dff87b2d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ca02b30002fd6a0aeb329f9db1a1797"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a0ca02b30002fd6a0aeb329f9db1a1797">choiceActionPatient</a> ()</td></tr>
-<tr class="separator:a0ca02b30002fd6a0aeb329f9db1a1797"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a973a5081d237afd897d4e2060978b782"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a973a5081d237afd897d4e2060978b782">choiceActionVisit</a> ()</td></tr>
-<tr class="separator:a973a5081d237afd897d4e2060978b782"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2f69c0136d85137c5ea3477f9021f15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#af2f69c0136d85137c5ea3477f9021f15">choiceActionTable</a> ()</td></tr>
-<tr class="separator:af2f69c0136d85137c5ea3477f9021f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a163b948b13489fd96803e2fe84fe59d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a163b948b13489fd96803e2fe84fe59d3">appWorker</a> ()</td></tr>
+<tr class="separator:a163b948b13489fd96803e2fe84fe59d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Zmienne</h2></td></tr>
-<tr class="memitem:a16855651ee3cd917f32fe408760de87d"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_doctor.html">Doctor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a16855651ee3cd917f32fe408760de87d">doc</a></td></tr>
-<tr class="separator:a16855651ee3cd917f32fe408760de87d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c7be5d2ad9f1d8dfe8a17008a42dac4"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_patient.html">Patient</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a5c7be5d2ad9f1d8dfe8a17008a42dac4">pat</a></td></tr>
-<tr class="separator:a5c7be5d2ad9f1d8dfe8a17008a42dac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b033a5e60c012f7c80556feb0bba9a5"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_visit.html">Visit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a8b033a5e60c012f7c80556feb0bba9a5">vis</a></td></tr>
-<tr class="separator:a8b033a5e60c012f7c80556feb0bba9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Dokumentacja funkcji</h2>
-<a id="a168f57a7fc5c34d3ece2c3dff87b2d41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a168f57a7fc5c34d3ece2c3dff87b2d41">&#9670;&nbsp;</a></span>choiceActionDoctor()</h2>
+<a id="a163b948b13489fd96803e2fe84fe59d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a163b948b13489fd96803e2fe84fe59d3">&#9670;&nbsp;</a></span>appWorker()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void choiceActionDoctor </td>
+          <td class="memname">int appWorker </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Wybor akcji na tabeli lekarzy </p><dl class="section note"><dt>Nota</dt><dd>konsolowe GUI </dd></dl>
-
-</div>
-</div>
-<a id="a0ca02b30002fd6a0aeb329f9db1a1797"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ca02b30002fd6a0aeb329f9db1a1797">&#9670;&nbsp;</a></span>choiceActionPatient()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void choiceActionPatient </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Wybor akcji na tabeli pacjenta </p><dl class="section note"><dt>Nota</dt><dd>konsolowe GUI </dd></dl>
-
-</div>
-</div>
-<a id="af2f69c0136d85137c5ea3477f9021f15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2f69c0136d85137c5ea3477f9021f15">&#9670;&nbsp;</a></span>choiceActionTable()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void choiceActionTable </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Wybor sekcji </p><dl class="section note"><dt>Nota</dt><dd>konsolowe GUI </dd></dl>
-
-</div>
-</div>
-<a id="a973a5081d237afd897d4e2060978b782"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a973a5081d237afd897d4e2060978b782">&#9670;&nbsp;</a></span>choiceActionVisit()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void choiceActionVisit </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Wybor akcji na tabeli visyt </p><dl class="section note"><dt>Nota</dt><dd>konsolowe GUI </dd></dl>
-
-</div>
-</div>
-<a id="a826f2ae646029af3d4a49840b9a174e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a826f2ae646029af3d4a49840b9a174e7">&#9670;&nbsp;</a></span>choiceAddDoctor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void choiceAddDoctor </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Dodanie lekarza </p><dl class="section note"><dt>Nota</dt><dd>konsolowe GUI </dd></dl>
-
-</div>
-</div>
-<a id="ac1e693262521f1a3e3d3ee817324ca54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1e693262521f1a3e3d3ee817324ca54">&#9670;&nbsp;</a></span>choiceAddPatient()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void choiceAddPatient </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Dodanie pacjenta </p><dl class="section note"><dt>Nota</dt><dd>konsolowe GUI </dd></dl>
-
-</div>
-</div>
-<a id="adb3b06bfb70d2d06fdc0f49f4c681e7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb3b06bfb70d2d06fdc0f49f4c681e7b">&#9670;&nbsp;</a></span>choiceAddVisit()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void choiceAddVisit </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Dodanie Wizyty </p><dl class="section note"><dt>Nota</dt><dd>konsolowe GUI </dd></dl>
-<p>&lt; Identyfikator pacjenta</p>
-<p>&lt; Identyfikator lekarza</p>
-<p>&lt; Data urodzenia w formacie DD-MM-YYYY</p>
-<p>&lt; Godzina wizyty w formacie GG:MM</p>
-<p>&lt; Czas trwania wizyty w formacie GG:MM</p>
-<p>&lt; Status wizyty</p>
-
-</div>
-</div>
-<a id="a4955e81d263353bebe0900c94c86930c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4955e81d263353bebe0900c94c86930c">&#9670;&nbsp;</a></span>choiceDeleteDoctor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void choiceDeleteDoctor </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Usuniêcie lekarza </p><dl class="section note"><dt>Nota</dt><dd>konsolowe GUI </dd></dl>
-
-</div>
-</div>
-<a id="adf724d5df270ebb88d6de88b4bfff2d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf724d5df270ebb88d6de88b4bfff2d8">&#9670;&nbsp;</a></span>choiceDeletePatient()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void choiceDeletePatient </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Usuniêcie pacjenta </p><dl class="section note"><dt>Nota</dt><dd>konsolowe GUI </dd></dl>
-
-</div>
-</div>
-<a id="a7ded695580a58850c7de3b0a790fb011"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ded695580a58850c7de3b0a790fb011">&#9670;&nbsp;</a></span>choiceDeleteVisitById()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void choiceDeleteVisitById </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Usuniêcie Wizyty </p><dl class="section note"><dt>Nota</dt><dd>konsolowe GUI </dd></dl>
-
-</div>
-</div>
-<a id="a9b90e6aed1700f3590e21a7739433189"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b90e6aed1700f3590e21a7739433189">&#9670;&nbsp;</a></span>choiceDoctorList()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void choiceDoctorList </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Wyswietlenie wszystkich lekarzy </p><dl class="section note"><dt>Nota</dt><dd>konsolowe GUI </dd></dl>
-
-</div>
-</div>
-<a id="acfec9a8082b26835786fbb9c21f76559"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfec9a8082b26835786fbb9c21f76559">&#9670;&nbsp;</a></span>choiceEditDoctor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void choiceEditDoctor </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Edycja lekarza </p><dl class="section note"><dt>Nota</dt><dd>konsolowe GUI </dd></dl>
-
-</div>
-</div>
-<a id="ac99a0374cd57e9818f1471aa9b6a31be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac99a0374cd57e9818f1471aa9b6a31be">&#9670;&nbsp;</a></span>choiceEditPatient()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void choiceEditPatient </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Edycja pacjenta </p><dl class="section note"><dt>Nota</dt><dd>konsolowe GUI </dd></dl>
-
-</div>
-</div>
-<a id="a744d09fad253ffe7ab59857799332ecc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a744d09fad253ffe7ab59857799332ecc">&#9670;&nbsp;</a></span>choicePatientList()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void choicePatientList </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Wyswietlenie wszystkich pacjentow </p><dl class="section note"><dt>Nota</dt><dd>konsolowe GUI </dd></dl>
-
-</div>
-</div>
-<a id="a48f22565b8a3d3490384e8ad2f955f47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48f22565b8a3d3490384e8ad2f955f47">&#9670;&nbsp;</a></span>choiceShowDoctor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void choiceShowDoctor </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Wyœwietlenie lekarza </p><dl class="section note"><dt>Nota</dt><dd>konsolowe GUI </dd></dl>
-
-</div>
-</div>
-<a id="a2c7c394f9c9c71004a15be06b04023e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c7c394f9c9c71004a15be06b04023e3">&#9670;&nbsp;</a></span>choiceShowPatient()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void choiceShowPatient </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Wyœwietlenie pacjenta </p><dl class="section note"><dt>Nota</dt><dd>konsolowe GUI </dd></dl>
-
-</div>
-</div>
-<a id="aaa6135b0afef86220295c3578a4c4e6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa6135b0afef86220295c3578a4c4e6b">&#9670;&nbsp;</a></span>choiceUpdateVisitById()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void choiceUpdateVisitById </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Edycja Wizyt </p><dl class="section note"><dt>Nota</dt><dd>konsolowe GUI </dd></dl>
-
-</div>
-</div>
-<a id="a155db86fcde4921bdd3a5704d870a55c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a155db86fcde4921bdd3a5704d870a55c">&#9670;&nbsp;</a></span>choiceVisitList()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void choiceVisitList </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Wyswietlenie wszystkich Visyt </p><dl class="section note"><dt>Nota</dt><dd>konsolowe GUI </dd></dl>
+<p>Funckja g³ówna ktora zarzadza wylaczaniem aplikacji </p><dl class="section note"><dt>Nota</dt><dd>Wywo³anie w petli funkcji wyboru sekcji </dd></dl>
+<dl class="section return"><dt>Zwraca</dt><dd>integer </dd></dl>
 
 </div>
 </div>
@@ -514,53 +144,7 @@ Zmienne</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Funckja g³ówna </p><dl class="section note"><dt>Nota</dt><dd>Wywo³anie w petli funkcji wyboru sekcji </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Dokumentacja zmiennych</h2>
-<a id="a16855651ee3cd917f32fe408760de87d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16855651ee3cd917f32fe408760de87d">&#9670;&nbsp;</a></span>doc</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="struct_doctor.html">Doctor</a> doc</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Zmienna pomocnicza z aktualnym lekarzem </p>
-
-</div>
-</div>
-<a id="a5c7be5d2ad9f1d8dfe8a17008a42dac4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c7be5d2ad9f1d8dfe8a17008a42dac4">&#9670;&nbsp;</a></span>pat</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="struct_patient.html">Patient</a> pat</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Zmienna pomocnicza z aktualnym pacjentem </p>
-
-</div>
-</div>
-<a id="a8b033a5e60c012f7c80556feb0bba9a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b033a5e60c012f7c80556feb0bba9a5">&#9670;&nbsp;</a></span>vis</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="struct_visit.html">Visit</a> vis</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Zmienna pomocnicza z aktualna wizyta </p>
+<p>Funckja g³ówna uruchamiajaca <a class="el" href="main_8c.html#a163b948b13489fd96803e2fe84fe59d3">appWorker()</a>; </p>
 
 </div>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>przychodnia: Dokumentacja pliku patients.c</title>
+<title>Przychodnia: Dokumentacja pliku patients.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,9 +29,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="stethoscope_no_sh_icon-icons.com_76245.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">przychodnia
+   <div id="projectname">Przychodnia
    </div>
+   <div id="projectbrief">Karol Chorzępa || Konrad Gliński || Karol Górnicki</div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -108,11 +110,13 @@ $(document).ready(function(){initNavTree('patients_8c.html',''); initResizable()
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Struktury danych</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_patient.html">Patient</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struktura reprezentujaca tabele Pacjenta w bazie danych.  <a href="struct_patient.html#details">Więcej...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struktura reprezentujaca tabele Pcjenta w bazie danych.  <a href="struct_patient.html#details">Więcej...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funkcje</h2></td></tr>
+<tr class="memitem:a6d306fef9abb8714dc3980791bfb40aa"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="patients_8c.html#a6d306fef9abb8714dc3980791bfb40aa">strconcat</a> (int num_args,...)</td></tr>
+<tr class="separator:a6d306fef9abb8714dc3980791bfb40aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5131fbe68a65cd7f150c6859c14b1bb8"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="patients_8c.html#a5131fbe68a65cd7f150c6859c14b1bb8">columnNamePatientChoice</a> ()</td></tr>
 <tr class="separator:a5131fbe68a65cd7f150c6859c14b1bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac55f8d55af5c1eb9d9e58ad760439fea"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="patients_8c.html#ac55f8d55af5c1eb9d9e58ad760439fea">sortPatientOrder</a> ()</td></tr>
@@ -125,6 +129,8 @@ Funkcje</h2></td></tr>
 <tr class="separator:aca661dda503b924e246c26084d1b550a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cc15a2fd9b3b5ed40c162d3ee3a74e8"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_patient.html">Patient</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="patients_8c.html#a7cc15a2fd9b3b5ed40c162d3ee3a74e8">getPatientById</a> (char id[50])</td></tr>
 <tr class="separator:a7cc15a2fd9b3b5ed40c162d3ee3a74e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a059ff86e50be808f9b8745ae3e0e7abd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="patients_8c.html#a059ff86e50be808f9b8745ae3e0e7abd">searchPatients</a> (char nameOrSecondName[100])</td></tr>
+<tr class="separator:a059ff86e50be808f9b8745ae3e0e7abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad984bb0210cee9f39adc2f44ba68611d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="patients_8c.html#ad984bb0210cee9f39adc2f44ba68611d">showAllpatients</a> (char sortByColumnName[], char sortOrder[])</td></tr>
 <tr class="separator:ad984bb0210cee9f39adc2f44ba68611d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b4259eb03fb8ada2163f1157cc66f35"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="patients_8c.html#a1b4259eb03fb8ada2163f1157cc66f35">insertData</a> ()</td></tr>
@@ -251,6 +257,32 @@ Zmienne</h2></td></tr>
 
 </div>
 </div>
+<a id="a059ff86e50be808f9b8745ae3e0e7abd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a059ff86e50be808f9b8745ae3e0e7abd">&#9670;&nbsp;</a></span>searchPatients()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void searchPatients </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>nameOrSecondName</em>[100]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Funkcja wyszukiwaj�ca pacjenta wedlug imienia i nazwiska</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nameOrSecondName</td><td>imie lub nazwisko pacjenta do wyszukania </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
+
+</div>
+</div>
 <a id="ad984bb0210cee9f39adc2f44ba68611d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad984bb0210cee9f39adc2f44ba68611d">&#9670;&nbsp;</a></span>showAllpatients()</h2>
 
@@ -307,6 +339,42 @@ Zmienne</h2></td></tr>
 
 </div>
 </div>
+<a id="a6d306fef9abb8714dc3980791bfb40aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d306fef9abb8714dc3980791bfb40aa">&#9670;&nbsp;</a></span>strconcat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* strconcat </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Funkcja pomocnicza do konkatynacji tablic charow</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num_args</td><td>liczba string�w do konkatynacji</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
+
+</div>
+</div>
 <a id="aca661dda503b924e246c26084d1b550a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca661dda503b924e246c26084d1b550a">&#9670;&nbsp;</a></span>updatePatientById()</h2>
 
@@ -332,7 +400,7 @@ Zmienne</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Funkcja aktualizujaca pacjenta w bazie, przyjmuje za argumeny id uzytkownika oraz strukture <a class="el" href="struct_patient.html" title="Struktura reprezentujaca tabele Pacjenta w bazie danych.">Patient</a> jako obiekt do ktorego ma zostac zaktualizowany</p>
+<p>Funkcja aktualizujaca pacjenta w bazie, przyjmuje za argumeny id uzytkownika oraz strukture <a class="el" href="struct_patient.html" title="Struktura reprezentujaca tabele Pcjenta w bazie danych.">Patient</a> jako obiekt do ktorego ma zostac zaktualizowany</p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>identyfikator pacjenta do zaktualizowania </td></tr>

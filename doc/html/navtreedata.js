@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "przychodnia", "index.html", [
+  [ "Przychodnia", "index.html", [
     [ "Przychodnia", "md_readme.html", [
       [ "Kompilacja i uruchomienie", "md_readme.html#autotoc_md1", null ],
       [ "Projekt przygotowali", "md_readme.html#autotoc_md2", null ]

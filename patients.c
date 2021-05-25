@@ -7,6 +7,35 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+
+/*!
+ * Funkcja pomocnicza do konkatynacji tablic charow
+ *
+ * @param num_args liczba stringów do konkatynacji
+ *
+ * @return void
+*/
+char *strconcat(int num_args, ...) {
+    int strsize = 0;
+    va_list ap;
+    va_start(ap, num_args);
+    for (int i = 0; i < num_args; i++)
+        strsize += strlen(va_arg(ap, char*));
+
+    char *res = malloc(strsize+1);
+    strsize = 0;
+    va_start(ap, num_args);
+    for (int i = 0; i < num_args; i++) {
+        char *s = va_arg(ap, char*);
+        strcpy(res+strsize, s);
+        strsize += strlen(s);
+    }
+    va_end(ap);
+    res[strsize] = '\0';
+
+    return res;
+}
+
 /**
  * Struktura reprezentujaca tabele Pcjenta w bazie danych
   */
@@ -113,6 +142,8 @@ const char* sortPatientOrder() {
         }
     }
 }
+
+
 
 
 
@@ -349,6 +380,44 @@ static int cbShowAllPatients(void *NotUsed, int argc, char **argv, char **azColN
     printf("\n");
     return 0;
 }
+
+
+/*!
+ *Funkcja wyszukiwaj¹ca pacjenta wedlug imienia i nazwiska
+ *
+ * @param nameOrSecondName imie lub nazwisko pacjenta do wyszukania
+ * @return void
+*/
+void searchPatients(char nameOrSecondName[100] ) {
+    sqlite3 *db;
+    char *zErrMsg = 0;
+    int rc;
+    char *sql;
+    const char *data = "Callback function called";
+
+    /* Open database */
+    rc = sqlite3_open("przychodnia.db", &db);
+
+    if (rc) {
+        fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
+    } else {
+        //  fprintf(stderr, "Opened database successfully\n");
+    }
+
+   /* Create SQL statement */
+    sql = strconcat(6, "SELECT * from patients where name like '%%", nameOrSecondName,"%%' ",
+                    "OR secondName like '%%",nameOrSecondName,"%%'");
+    rc = sqlite3_exec(db, sql, cbShowAllPatients, (void *) data, &zErrMsg);
+
+    if (rc != SQLITE_OK) {
+        fprintf(stderr, "SQL error: %s\n", zErrMsg);
+        sqlite3_free(zErrMsg);
+    } else {
+        //   fprintf(stdout, "Operation done successfully\n");
+    }
+    sqlite3_close(db);
+}
+
 
 
 /*!

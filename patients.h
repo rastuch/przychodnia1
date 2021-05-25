@@ -13,6 +13,8 @@ const char* columnNamePatientChoice();
 
 const char* sortPatientOrder();
 
+void searchPatients(char nameOrSecondName[100]);
+
 void addPatient(struct Patient newPatient);
 
 struct Patient getPatientById(char id[50]);

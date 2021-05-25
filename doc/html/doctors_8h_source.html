@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>przychodnia: Plik źródłowy doctors.h</title>
+<title>Przychodnia: Plik źródłowy doctors.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,9 +29,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="stethoscope_no_sh_icon-icons.com_76245.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">przychodnia
+   <div id="projectname">Przychodnia
    </div>
+   <div id="projectbrief">Karol Chorzępa || Konrad Gliński || Karol Górnicki</div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -110,23 +112,26 @@ $(document).ready(function(){initNavTree('doctors_8h_source.html',''); initResiz
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="doctors_8h.html#a8cc216719f33b9d77653f1ca7b2faf73">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="doctors_8h.html#a8cc216719f33b9d77653f1ca7b2faf73">showAllDoctors</a>();</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">struct </span><a class="code" href="struct_doctor.html">Doctor</a> <a class="code" href="doctors_8h.html#ac9aead3ab0c4557ca0bbf34e3167519c">getDoctorById</a>(char <a class="code" href="struct_doctor.html#a7441ef0865bcb3db9b8064dd7375c1ea">id</a>[50]);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="doctors_8h.html#a8e33b5ec9e2778de68cf5170d1709d4a">searchDoctors</a>(<span class="keywordtype">char</span> nameOrSecondName[100] );</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> <a class="code" href="doctors_8h.html#a61e7be2a6b993f220fa85cc405a17ed1">addDoctor</a>(<span class="keyword">struct</span> <a class="code" href="struct_doctor.html">Doctor</a> newDoctor);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">struct </span><a class="code" href="struct_doctor.html">Doctor</a> <a class="code" href="doctors_8h.html#ac9aead3ab0c4557ca0bbf34e3167519c">getDoctorById</a>(char <a class="code" href="struct_doctor.html#a7441ef0865bcb3db9b8064dd7375c1ea">id</a>[50]);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="doctors_8h.html#a14108422b46dfd2a9b795829403546dd">updateDoctorById</a>(<span class="keywordtype">char</span> <span class="keywordtype">id</span>[50], <span class="keyword">struct</span> <a class="code" href="struct_doctor.html">Doctor</a> newDoctor);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="doctors_8h.html#a61e7be2a6b993f220fa85cc405a17ed1">addDoctor</a>(<span class="keyword">struct</span> <a class="code" href="struct_doctor.html">Doctor</a> newDoctor);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="doctors_8h.html#a779f6c2ab0772c6677298e31638d7534">deleteDoctorById</a>(<span class="keywordtype">char</span> <span class="keywordtype">id</span>[50]);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="doctors_8h.html#a14108422b46dfd2a9b795829403546dd">updateDoctorById</a>(<span class="keywordtype">char</span> <span class="keywordtype">id</span>[50], <span class="keyword">struct</span> <a class="code" href="struct_doctor.html">Doctor</a> newDoctor);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//PRZYCHODNIA_DOCTORS_H</span></div>
-<div class="ttc" id="adoctors_8h_html_a14108422b46dfd2a9b795829403546dd"><div class="ttname"><a href="doctors_8h.html#a14108422b46dfd2a9b795829403546dd">updateDoctorById</a></div><div class="ttdeci">void updateDoctorById(char id[50], struct Doctor newDoctor)</div><div class="ttdef"><b>Definition:</b> doctors.c:202</div></div>
-<div class="ttc" id="adoctors_8h_html_a40095c6b0d3db2166dbe527ea023900a"><div class="ttname"><a href="doctors_8h.html#a40095c6b0d3db2166dbe527ea023900a">columnNameDoctorChoice</a></div><div class="ttdeci">const char * columnNameDoctorChoice()</div><div class="ttdef"><b>Definition:</b> doctors.c:39</div></div>
-<div class="ttc" id="adoctors_8h_html_a61e7be2a6b993f220fa85cc405a17ed1"><div class="ttname"><a href="doctors_8h.html#a61e7be2a6b993f220fa85cc405a17ed1">addDoctor</a></div><div class="ttdeci">void addDoctor(struct Doctor newDoctor)</div><div class="ttdef"><b>Definition:</b> doctors.c:247</div></div>
-<div class="ttc" id="adoctors_8h_html_a779f6c2ab0772c6677298e31638d7534"><div class="ttname"><a href="doctors_8h.html#a779f6c2ab0772c6677298e31638d7534">deleteDoctorById</a></div><div class="ttdeci">void deleteDoctorById(char id[50])</div><div class="ttdef"><b>Definition:</b> doctors.c:160</div></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> <a class="code" href="doctors_8h.html#a779f6c2ab0772c6677298e31638d7534">deleteDoctorById</a>(<span class="keywordtype">char</span> <span class="keywordtype">id</span>[50]);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//PRZYCHODNIA_DOCTORS_H</span></div>
+<div class="ttc" id="adoctors_8h_html_a14108422b46dfd2a9b795829403546dd"><div class="ttname"><a href="doctors_8h.html#a14108422b46dfd2a9b795829403546dd">updateDoctorById</a></div><div class="ttdeci">void updateDoctorById(char id[50], struct Doctor newDoctor)</div><div class="ttdef"><b>Definition:</b> doctors.c:231</div></div>
+<div class="ttc" id="adoctors_8h_html_a40095c6b0d3db2166dbe527ea023900a"><div class="ttname"><a href="doctors_8h.html#a40095c6b0d3db2166dbe527ea023900a">columnNameDoctorChoice</a></div><div class="ttdeci">const char * columnNameDoctorChoice()</div><div class="ttdef"><b>Definition:</b> doctors.c:68</div></div>
+<div class="ttc" id="adoctors_8h_html_a61e7be2a6b993f220fa85cc405a17ed1"><div class="ttname"><a href="doctors_8h.html#a61e7be2a6b993f220fa85cc405a17ed1">addDoctor</a></div><div class="ttdeci">void addDoctor(struct Doctor newDoctor)</div><div class="ttdef"><b>Definition:</b> doctors.c:276</div></div>
+<div class="ttc" id="adoctors_8h_html_a779f6c2ab0772c6677298e31638d7534"><div class="ttname"><a href="doctors_8h.html#a779f6c2ab0772c6677298e31638d7534">deleteDoctorById</a></div><div class="ttdeci">void deleteDoctorById(char id[50])</div><div class="ttdef"><b>Definition:</b> doctors.c:189</div></div>
 <div class="ttc" id="adoctors_8h_html_a8cc216719f33b9d77653f1ca7b2faf73"><div class="ttname"><a href="doctors_8h.html#a8cc216719f33b9d77653f1ca7b2faf73">showAllDoctors</a></div><div class="ttdeci">void showAllDoctors()</div></div>
-<div class="ttc" id="adoctors_8h_html_abd8482e8c68d0dee88a9065fac7f80f6"><div class="ttname"><a href="doctors_8h.html#abd8482e8c68d0dee88a9065fac7f80f6">insertDataDoctors</a></div><div class="ttdeci">int insertDataDoctors()</div><div class="ttdef"><b>Definition:</b> doctors.c:413</div></div>
-<div class="ttc" id="adoctors_8h_html_ac9aead3ab0c4557ca0bbf34e3167519c"><div class="ttname"><a href="doctors_8h.html#ac9aead3ab0c4557ca0bbf34e3167519c">getDoctorById</a></div><div class="ttdeci">struct Doctor getDoctorById(char id[50])</div><div class="ttdef"><b>Definition:</b> doctors.c:320</div></div>
-<div class="ttc" id="adoctors_8h_html_aea8b1ec2d1126cdd50bbf517a59c4373"><div class="ttname"><a href="doctors_8h.html#aea8b1ec2d1126cdd50bbf517a59c4373">sortDoctorOrder</a></div><div class="ttdeci">const char * sortDoctorOrder()</div><div class="ttdef"><b>Definition:</b> doctors.c:114</div></div>
+<div class="ttc" id="adoctors_8h_html_a8e33b5ec9e2778de68cf5170d1709d4a"><div class="ttname"><a href="doctors_8h.html#a8e33b5ec9e2778de68cf5170d1709d4a">searchDoctors</a></div><div class="ttdeci">void searchDoctors(char nameOrSecondName[100])</div><div class="ttdef"><b>Definition:</b> doctors.c:405</div></div>
+<div class="ttc" id="adoctors_8h_html_abd8482e8c68d0dee88a9065fac7f80f6"><div class="ttname"><a href="doctors_8h.html#abd8482e8c68d0dee88a9065fac7f80f6">insertDataDoctors</a></div><div class="ttdeci">int insertDataDoctors()</div><div class="ttdef"><b>Definition:</b> doctors.c:480</div></div>
+<div class="ttc" id="adoctors_8h_html_ac9aead3ab0c4557ca0bbf34e3167519c"><div class="ttname"><a href="doctors_8h.html#ac9aead3ab0c4557ca0bbf34e3167519c">getDoctorById</a></div><div class="ttdeci">struct Doctor getDoctorById(char id[50])</div><div class="ttdef"><b>Definition:</b> doctors.c:349</div></div>
+<div class="ttc" id="adoctors_8h_html_aea8b1ec2d1126cdd50bbf517a59c4373"><div class="ttname"><a href="doctors_8h.html#aea8b1ec2d1126cdd50bbf517a59c4373">sortDoctorOrder</a></div><div class="ttdeci">const char * sortDoctorOrder()</div><div class="ttdef"><b>Definition:</b> doctors.c:143</div></div>
 <div class="ttc" id="astruct_doctor_html"><div class="ttname"><a href="struct_doctor.html">Doctor</a></div><div class="ttdoc">Struktura reprezentujaca tabele Lekarza w bazie danych.</div><div class="ttdef"><b>Definition:</b> doctors.c:15</div></div>
 <div class="ttc" id="astruct_doctor_html_a7441ef0865bcb3db9b8064dd7375c1ea"><div class="ttname"><a href="struct_doctor.html#a7441ef0865bcb3db9b8064dd7375c1ea">Doctor::id</a></div><div class="ttdeci">int id</div><div class="ttdoc">Identyfikator.</div><div class="ttdef"><b>Definition:</b> doctors.c:16</div></div>
 </div><!-- fragment --></div><!-- contents -->

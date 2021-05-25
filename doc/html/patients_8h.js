@@ -6,6 +6,7 @@ var patients_8h =
     [ "getPatientById", "patients_8h.html#a7cc15a2fd9b3b5ed40c162d3ee3a74e8", null ],
     [ "getPatientObject", "patients_8h.html#a82c335268acdd04d6de94b39bc9d21ec", null ],
     [ "insertData", "patients_8h.html#a1b4259eb03fb8ada2163f1157cc66f35", null ],
+    [ "searchPatients", "patients_8h.html#a059ff86e50be808f9b8745ae3e0e7abd", null ],
     [ "showAllpatients", "patients_8h.html#a3312785158b9d8fe21dafc76391bfc3d", null ],
     [ "sortPatientOrder", "patients_8h.html#ac55f8d55af5c1eb9d9e58ad760439fea", null ],
     [ "updatePatientById", "patients_8h.html#aca661dda503b924e246c26084d1b550a", null ]
