@@ -5,7 +5,7 @@
 
 ```shell
 
-gcc main.c sqlite3.c patients.c doctors.c visits.c
+gcc main.c sqlite3.c patients.c doctors.c visits.c views.c
 ```
 oraz uruchom a.exe
 
