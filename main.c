@@ -75,14 +75,14 @@ struct Visit vis;
  */
 void choicePatientList() {
     printf("\n");
-        const char *table;
-        table = columnNamePatientChoice();
-        const char *order;
-        order = sortPatientOrder();
+    const char *table;
+    table = columnNamePatientChoice();
+    const char *order;
+    order = sortPatientOrder();
 
-        showAllpatients(table, order); // funkcja odow³uj¹ca siê do bazy
+    showAllpatients(table, order); // funkcja odow³uj¹ca siê do bazy
 
-        printf("\n\n");
+    printf("\n\n");
 
 }
 
@@ -467,6 +467,153 @@ void choiceEditDoctor() {
 }
 
 /*!
+* Wyswietlenie wszystkich Visyt
+* @note konsolowe GUI
+*/
+void choiceVisitList() {
+    printf("\n");
+    showAllVisits(); // funkcja odow³uj¹ca siê do bazy
+    printf("\n\n");
+}
+
+/*!
+ * Dodanie Wizyty
+ * @note konsolowe GUI
+ */
+void choiceAddVisit() {
+
+    char patientId[50]; /**< Identyfikator pacjenta */
+    char doctorId[50]; /**< Identyfikator lekarza */
+    char date[50]; /**< Data urodzenia w formacie DD-MM-YYYY */
+    char time[50]; /**< Godzina wizyty w formacie GG:MM */
+    char duration[50]; /**< Czas trwania wizyty w formacie GG:MM */
+    char status[200]; /**< Status wizyty */
+
+    printf("Podaj id Pacjenta\n");
+    scanf("%s", patientId);
+    strcpy(vis.patientId, patientId);
+
+    printf("Podaj id Lekarza\n");
+    scanf("%s", doctorId);
+    strcpy(vis.doctorId, doctorId);
+
+    printf("Podaj termin wizyty DD-MM-YYYY\n");
+    scanf("%s", date);
+    strcpy(vis.date, date);
+
+    printf("Podaj godzine w formacie GG:MM\n");
+    scanf("%s", time);
+    strcpy(vis.time, time);
+
+    printf("Podaj czas trwania wizyty\n");
+    scanf("%s", duration);
+    strcpy(vis.duration, duration);
+
+    printf("Podaj czy wizyta jest zaplanowana czy niezaplanowana\n");
+    scanf("%s", status);
+    strcpy(vis.status, status);
+
+    addVisit(vis);
+
+    printf("\nDodano Wizyte!");
+    printf("\n\n");
+}
+
+/*!
+ * Edycja Wizyt
+ * @note konsolowe GUI
+ */
+void choiceUpdateVisitById(){
+    printf("\nPodaj id Wizyty:\n");
+    char id[50];
+    scanf("%s", &id);
+
+    struct Visit myVisit = getVisitById(id); // funkcja odow³uj¹ca siê do bazy
+
+    char message[400];
+    snprintf(message, sizeof(message), "\n\nId_Pacjenta: %s,  Id_Doktora: %s,  Data: %s,Godzina: %s,Czas Trwania: %s,Status: %s,", myVisit.patientId,
+             myVisit.doctorId,myVisit.date, myVisit.time, myVisit.duration, myVisit.status);
+    printf("%s", message);
+    printf("\n\n");
+
+    printf("Czy chcesz zmienic id Pacjenta?  1 - tak, 0 - nie\n");
+    int choice;
+    scanf("%i", &choice);
+    if (choice == 1) {
+        char patientId[200];
+        printf("Podaj nowe id\n");
+        scanf("%s", patientId);
+        strcpy(myVisit.patientId, patientId);
+    }
+    printf("Czy chcesz zmienic id lekarza?  1 - tak, 0 - nie\n");
+
+    scanf("%i", &choice);
+    if (choice == 1) {
+        char doctorId[200];
+        printf("Podaj nowe Id lekarza\n");
+        scanf("%s", doctorId);
+        strcpy(myVisit.doctorId, doctorId);
+    }
+    printf("Czy chcesz zmienic termin wizyty?  1 - tak, 0 - nie\n");
+
+    scanf("%i", &choice);
+    if (choice == 1) {
+        char date[50];
+        printf("Podaj nowy Termin DD-MM-YYYY\n");
+        scanf("%s", date);
+        strcpy(myVisit.date, date);
+    }
+    printf("Czy chcesz zmienic godzine wizyty?  1 - tak, 0 - nie\n");
+
+    scanf("%i", &choice);
+    if (choice == 1) {
+        char time[200];
+        printf("Podaj nowa godzine\n");
+        scanf("%s", time);
+        strcpy(myVisit.time, time);
+    }
+    printf("Czy chcesz zmienic czas trwania wizyty?  1 - tak, 0 - nie\n");
+
+    scanf("%i", &choice);
+    if (choice == 1) {
+        char duration[200];
+        printf("Podaj nowy czas trwania wizyty\n");
+        scanf("%s", duration);
+        strcpy(myVisit.duration, duration);
+    }
+    printf("Czy chcesz zmienic status wizyty?  1 - tak, 0 - nie\n");
+
+    scanf("%i", &choice);
+    if (choice == 1) {
+        char status[50];
+        printf("Podaj nowy Status wizyty\n");
+        scanf("%s", status);
+        strcpy(myVisit.status, status);
+    }
+
+    updateVisitById(id, myVisit); //
+
+    printf("\nZaktualizowano Wizyte!");
+    printf("\n\n");
+
+}
+
+/*!
+ * Usuniêcie Wizyty
+ * @note konsolowe GUI
+ */
+void choiceDeleteVisitById(){
+    printf("\nPodaj id Wizyty:\n");
+    char id[50];
+    scanf("%s", &id);
+
+    deleteVisitById(id); // funkcja odow³uj¹ca siê do bazy
+
+    printf("\nUsunieto Wizyte\n\n");
+
+}
+
+/*!
  * Wybor akcji na tabeli lekarzy
  * @note konsolowe GUI
  */
@@ -564,6 +711,50 @@ void choiceActionPatient() {
 }
 
 /*!
+ * Wybor akcji na tabeli visyt
+ * @note konsolowe GUI
+ */
+void choiceActionVisit() {
+
+    printf("\nWybierz akcje ktora chcesz wykonac\n");
+    printf("\n1.Dodanie wizyty");
+    printf("\n2.Edycja wizyty");
+    printf("\n3.Usuniêcie wizyty");
+    printf("\n4.Wyswietalanie wizyt");
+    printf("\n5.Powrót do wyboru sekcji");
+    int choice;
+    scanf("%d", &choice);
+    switch (choice) {
+        case 1:
+            choiceAddVisit();
+            choiceActionVisit();
+            break;
+
+        case 2:
+            choiceUpdateVisitById();
+            choiceActionVisit();
+            break;
+
+        case 3:
+            choiceDeleteVisitById();
+            choiceActionVisit();
+            break;
+
+        case 4:
+            choiceVisitList();
+            choiceActionVisit();
+            break;
+
+        case 5:
+            break;
+        default:
+            printf("\nPodano nieprawidlowy wybor!\n");
+            choiceActionPatient();
+            break;
+    }
+}
+
+/*!
  * Wybor sekcji
  * @note konsolowe GUI
  */
@@ -583,12 +774,14 @@ void choiceActionTable() {
         case 2:
             choiceActionDoctor();
             break;
+        case 3:
+            choiceActionVisit();
+            break;
         default:
             printf("\nPodano nieprawidlowy wybor!\n\n\n");
             choiceActionTable();
     }
 }
-
 
 /*!
  * Funckja g³ówna

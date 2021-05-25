@@ -11,6 +11,7 @@ void showAllVisits();
 
 struct Visit getVisitById(char id[50]);
 
+
 void addVisit(struct Visit newVisit);
 
 void updateVisitById(char id[50], struct Visit newVisit);
