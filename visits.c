@@ -7,7 +7,8 @@
 #include "sqlite3.h"
 #include <stdlib.h>
 #include <stdio.h>
-
+#include "doctors.h"
+#include "patients.h"
 
 /**
  * Struktura reprezentujaca tabele Wizyt w bazie danych
@@ -21,6 +22,73 @@ struct Visit {
     char duration[50]; /**< Czas trwania wizyty w formacie GG:MM */
     char status[200]; /**< Status wizyty */
 };
+
+/**
+ * Struktura reprezentujaca tabele Lekarza w bazie danych
+  */
+struct Doctor {
+    int id; /**< Identyfikator */
+    char name[200]; /**< Imie */
+    char secondName[200]; /**< Nazwisko */
+    char pesel[50]; /**< Numer PESEL */
+    char pwzNumber[50]; /**< Numer PWZ */
+    char title[200]; /**< Tytul naukowy */
+    char specialization[200]; /**< Specjalizacja */
+    char email[200]; /**< Email */
+    char birthDate[200]; /**< Data urodzenia w formacie DD-MM-YYYY */
+    char address[200]; /**< Adres */
+    char phone[50]; /**< Numer telefonu */
+    char weight[200]; /**< Waga */
+    char height[200]; /**< Wzrost */
+    char nfz[200]; /**< NFZ */
+};
+
+/**
+ * Struktura reprezentujaca tabele Pcjenta w bazie danych
+  */
+struct Patient {
+    /*@{*/
+    char name[200]; /**< Imie */
+    char secondName[200]; /**< Nazwisko */
+    char pesel[50]; /**< Numer pesel jako tablia znakow */
+    char birthDate[200]; /**< data urodzenia w formacje DD-MM-YYYY */
+    char address[200]; /**< Adres */
+    char email[200]; /**< Email */
+    char phone[50]; /**< Numer telefonu */
+    char weight[200]; /**< Waga w kg */
+    char height[200]; /**< Wzrost w cm */
+    char nfz[200]; /**< NFZ */
+    /*@{*/
+};
+
+
+/*!
+ * Funkcja pomocnicza do konkatynacji tablic charow
+ *
+ * @param num_args liczba stringów do konkatynacji
+ *
+ * @return void
+*/
+char *strconcat2(int num_args, ...) {
+    int strsize = 0;
+    va_list ap;
+    va_start(ap, num_args);
+    for (int i = 0; i < num_args; i++)
+        strsize += strlen(va_arg(ap, char*));
+
+    char *res = malloc(strsize+1);
+    strsize = 0;
+    va_start(ap, num_args);
+    for (int i = 0; i < num_args; i++) {
+        char *s = va_arg(ap, char*);
+        strcpy(res+strsize, s);
+        strsize += strlen(s);
+    }
+    va_end(ap);
+    res[strsize] = '\0';
+
+    return res;
+}
 
 /*!
  * Zmienna z aktualna wizyta
@@ -233,8 +301,24 @@ struct Visit getVisitById(char id[50]) {
 static int cbShowAllVisits(void *NotUsed, int argc, char **argv, char **azColName) {
     int i;
     for (i = 0; i < argc; i++) {
-        printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
-
+        if (i == 1){
+            char *id = argv[i];
+            struct Patient patient;
+            patient = getPatientById(id);
+            char * patientNameSecondNameAndId;
+            patientNameSecondNameAndId = strconcat2(6,"(",argv[i],") ",patient.name," ",patient.secondName);
+            printf("%s = %s\n", azColName[i], argv[i] ? patientNameSecondNameAndId : "NULL");
+        }
+        else if(i == 2){
+            char *id = argv[i];
+            struct Doctor doctor;
+            doctor = getDoctorById(id);
+            char * doctorNameSecondNameAndId;
+            doctorNameSecondNameAndId = strconcat2(6,"(",argv[i],") ",doctor.name," ",doctor.secondName);
+            printf("%s = %s\n", azColName[i], argv[i] ? doctorNameSecondNameAndId : "NULL");
+        }else {
+            printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
+        }
     }
     printf("\n");
     return 0;

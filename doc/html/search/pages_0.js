@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['przychodnia_183',['Przychodnia',['../md_readme.html',1,'']]]
+  ['przychodnia_185',['Przychodnia',['../md_readme.html',1,'']]]
 ];

@@ -106,15 +106,25 @@ $(document).ready(function(){initNavTree('visits_8c.html',''); initResizable(); 
 <code>#include &quot;sqlite3.h&quot;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="doctors_8h_source.html">doctors.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="patients_8h_source.html">patients.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Struktury danych</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_visit.html">Visit</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struktura reprezentujaca tabele Wizyt w bazie danych.  <a href="struct_visit.html#details">Więcej...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struktura reprezentujaca tabele Wizyty w bazie danych.  <a href="struct_visit.html#details">Więcej...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_doctor.html">Doctor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struktura reprezentujaca tabele Lekarza w bazie danych.  <a href="struct_doctor.html#details">Więcej...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_patient.html">Patient</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struktura reprezentujaca tabele Pcjenta w bazie danych.  <a href="struct_patient.html#details">Więcej...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funkcje</h2></td></tr>
+<tr class="memitem:adbddf730181bbf28caf571d76cf9fbd3"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="visits_8c.html#adbddf730181bbf28caf571d76cf9fbd3">strconcat2</a> (int num_args,...)</td></tr>
+<tr class="separator:adbddf730181bbf28caf571d76cf9fbd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77d1f8fa4b15985a5e8cc3624526e570"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="visits_8c.html#a77d1f8fa4b15985a5e8cc3624526e570">deleteVisitById</a> (char id[50])</td></tr>
 <tr class="separator:a77d1f8fa4b15985a5e8cc3624526e570"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2f09d8affe4815c93078cc7c8b8ac5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="visits_8c.html#aa2f09d8affe4815c93078cc7c8b8ac5a">updateVisitById</a> (char id[50], struct <a class="el" href="struct_visit.html">Visit</a> newVisit)</td></tr>
@@ -176,9 +186,9 @@ Zmienne</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Funkcja usuwająca wizyte z bazy przyjmująca za argument id </p><dl class="params"><dt>Parametry</dt><dd>
+<p>Funkcja usuwajÄ…ca wizyte z bazy przyjmujÄ…ca za argument id </p><dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>identyfikator wizyty do usunięcia @retrun void </td></tr>
+    <tr><td class="paramname">id</td><td>identyfikator wizyty do usuniÄ™cia @retrun void </td></tr>
   </table>
   </dd>
 </dl>
@@ -200,7 +210,7 @@ Zmienne</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Funkcja zwracająca strukture <a class="el" href="struct_visit.html" title="Struktura reprezentujaca tabele Wizyt w bazie danych.">Visit</a> z bazy danych na podstawie podanego parametru id</p>
+<p>Funkcja zwracajÄ…ca strukture <a class="el" href="struct_visit.html" title="Struktura reprezentujaca tabele Wizyty w bazie danych.">Visit</a> z bazy danych na podstawie podanego parametru id</p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>identyfikator wizyty do wyswietlenia </td></tr>
@@ -242,7 +252,43 @@ Zmienne</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Funkcja wyswietla listę wszystkich lekarzy</p>
+<p>Funkcja wyswietla listÄ™ wszystkich lekarzy</p>
+<dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="adbddf730181bbf28caf571d76cf9fbd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbddf730181bbf28caf571d76cf9fbd3">&#9670;&nbsp;</a></span>strconcat2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* strconcat2 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Funkcja pomocnicza do konkatynacji tablic charow</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num_args</td><td>liczba stringĂłw do konkatynacji</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
 
 </div>
@@ -272,7 +318,7 @@ Zmienne</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Funkcja aktualizujaca wizyte w bazie, przyjmuje za argumeny id uzytkownika oraz strukture <a class="el" href="struct_visit.html" title="Struktura reprezentujaca tabele Wizyt w bazie danych.">Visit</a> jako obiekt do ktorego ma zostac zaktualizowany</p>
+<p>Funkcja aktualizujaca wizyte w bazie, przyjmuje za argumeny id uzytkownika oraz strukture <a class="el" href="struct_visit.html" title="Struktura reprezentujaca tabele Wizyty w bazie danych.">Visit</a> jako obiekt do ktorego ma zostac zaktualizowany</p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>identyfikator wizyty do zaktualizowania </td></tr>

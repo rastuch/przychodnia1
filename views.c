@@ -47,7 +47,9 @@ struct Doctor {
     char nfz[200]; /**< NFZ */
 };
 
-//Struct representing patient Visits in database
+/**
+ * Struktura reprezentujaca tabele Wizyty w bazie danych
+  */
 struct Visit {
     int id; /**< Identyfikator */
     char patientId[50]; /**< Identyfikator pacjenta */
@@ -808,7 +810,6 @@ int choiceActionTable() {
     printf("\n\n4.Zamknij");
     int choice;
     scanf("%d", &choice);
-
     switch (choice) {
         case 1:
             choiceActionPatient();

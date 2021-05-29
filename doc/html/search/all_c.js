@@ -11,5 +11,6 @@ var searchData=
   ['specialization_75',['specialization',['../struct_doctor.html#ab1c25190eff585f599688c1475ef374c',1,'Doctor']]],
   ['status_76',['status',['../struct_visit.html#ab10e2037bade68a82f91e7e5ae34ac0e',1,'Visit']]],
   ['strconcat_77',['strconcat',['../patients_8c.html#a6d306fef9abb8714dc3980791bfb40aa',1,'patients.c']]],
-  ['strconcat1_78',['strconcat1',['../doctors_8c.html#a017149af725d10138992c6f3b3c4dad1',1,'doctors.c']]]
+  ['strconcat1_78',['strconcat1',['../doctors_8c.html#a017149af725d10138992c6f3b3c4dad1',1,'doctors.c']]],
+  ['strconcat2_79',['strconcat2',['../visits_8c.html#adbddf730181bbf28caf571d76cf9fbd3',1,'visits.c']]]
 ];
