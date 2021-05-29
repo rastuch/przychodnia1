@@ -13,7 +13,7 @@ const char* sortDoctorOrder();
 
 void showAllDoctors();
 
-void searchDoctors(char nameOrSecondName[100] );
+void searchDoctors(char nameOrSecondNameOrPwz[100] );
 
 struct Doctor getDoctorById(char id[50]);
 

@@ -6,7 +6,7 @@ var doctors_8c =
     [ "deleteDoctorById", "doctors_8c.html#a779f6c2ab0772c6677298e31638d7534", null ],
     [ "getDoctorById", "doctors_8c.html#ac9aead3ab0c4557ca0bbf34e3167519c", null ],
     [ "insertDataDoctors", "doctors_8c.html#abd8482e8c68d0dee88a9065fac7f80f6", null ],
-    [ "searchDoctors", "doctors_8c.html#a8e33b5ec9e2778de68cf5170d1709d4a", null ],
+    [ "searchDoctors", "doctors_8c.html#a0fdc644aa75cd67233ff6cfae127ed8b", null ],
     [ "showAllDoctors", "doctors_8c.html#ae2612e1e8ca56323c8c74a2fccab13c3", null ],
     [ "sortDoctorOrder", "doctors_8c.html#aea8b1ec2d1126cdd50bbf517a59c4373", null ],
     [ "strconcat1", "doctors_8c.html#a017149af725d10138992c6f3b3c4dad1", null ],

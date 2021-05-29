@@ -116,7 +116,7 @@ void choiceDoctorList() {
  */
 void choiceSearchPatient(){
     char imie[100];
-    printf("\nPoddaj imie lub nazwisko pacjenta: \n");
+    printf("\nPoddaj imie,nazwisko lub numer pesel pacjenta: \n");
     scanf("%s",&imie);
     searchPatients(imie);
     printf("\n\n");
@@ -128,7 +128,7 @@ void choiceSearchPatient(){
  */
 void choiceSearchDoctors(){
     char imie[100];
-    printf("\nPoddaj imie lub nazwisko lekarza: \n");
+    printf("\nPoddaj imie ,nazwisko lub numer PWZ lekarza: \n");
     scanf("%s",&imie);
     searchDoctors(imie);
     printf("\n\n");

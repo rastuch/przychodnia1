@@ -129,8 +129,8 @@ Funkcje</h2></td></tr>
 <tr class="separator:a61e7be2a6b993f220fa85cc405a17ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9aead3ab0c4557ca0bbf34e3167519c"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_doctor.html">Doctor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctors_8c.html#ac9aead3ab0c4557ca0bbf34e3167519c">getDoctorById</a> (char id[50])</td></tr>
 <tr class="separator:ac9aead3ab0c4557ca0bbf34e3167519c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e33b5ec9e2778de68cf5170d1709d4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctors_8c.html#a8e33b5ec9e2778de68cf5170d1709d4a">searchDoctors</a> (char nameOrSecondName[100])</td></tr>
-<tr class="separator:a8e33b5ec9e2778de68cf5170d1709d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fdc644aa75cd67233ff6cfae127ed8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctors_8c.html#a0fdc644aa75cd67233ff6cfae127ed8b">searchDoctors</a> (char nameOrSecondNameOrPwz[100])</td></tr>
+<tr class="separator:a0fdc644aa75cd67233ff6cfae127ed8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2612e1e8ca56323c8c74a2fccab13c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctors_8c.html#ae2612e1e8ca56323c8c74a2fccab13c3">showAllDoctors</a> (char sortByTableName[], char sortOrder[])</td></tr>
 <tr class="separator:ae2612e1e8ca56323c8c74a2fccab13c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd8482e8c68d0dee88a9065fac7f80f6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctors_8c.html#abd8482e8c68d0dee88a9065fac7f80f6">insertDataDoctors</a> ()</td></tr>
@@ -255,8 +255,8 @@ Zmienne</h2></td></tr>
 
 </div>
 </div>
-<a id="a8e33b5ec9e2778de68cf5170d1709d4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e33b5ec9e2778de68cf5170d1709d4a">&#9670;&nbsp;</a></span>searchDoctors()</h2>
+<a id="a0fdc644aa75cd67233ff6cfae127ed8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fdc644aa75cd67233ff6cfae127ed8b">&#9670;&nbsp;</a></span>searchDoctors()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -265,15 +265,15 @@ Zmienne</h2></td></tr>
           <td class="memname">void searchDoctors </td>
           <td>(</td>
           <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>nameOrSecondName</em>[100]</td><td>)</td>
+          <td class="paramname"><em>nameOrSecondNameOrPwz</em>[100]</td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Funkcja wyszukiwająca lekarza wedlug imienia i nazwiska</p>
+<p>Funkcja wyszukiwająca lekarza wedlug imienia i nazwiska lub numerze pwz</p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
-    <tr><td class="paramname">nameOrSecondName</td><td>imie lub nazwisko lekarza do wyszukania </td></tr>
+    <tr><td class="paramname">nameOrSecondNameOrPwz</td><td>imie lub nazwisko lekarza lub numerze pwz do wyszukania </td></tr>
   </table>
   </dd>
 </dl>

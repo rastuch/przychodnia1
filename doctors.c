@@ -397,12 +397,12 @@ static int cbShowAllPatients(void *NotUsed, int argc, char **argv, char **azColN
 
 
 /*!
- *Funkcja wyszukiwaj¹ca lekarza wedlug imienia i nazwiska
+ *Funkcja wyszukiwaj¹ca lekarza wedlug imienia i nazwiska lub numerze pwz
  *
- * @param nameOrSecondName imie lub nazwisko lekarza do wyszukania
+ * @param nameOrSecondNameOrPwz imie lub nazwisko lekarza lub numerze pwz do wyszukania
  * @return void
 */
-void searchDoctors(char nameOrSecondName[100] ) {
+void searchDoctors(char nameOrSecondNameOrPwz[100] ) {
     sqlite3 *db;
     char *zErrMsg = 0;
     int rc;
@@ -419,8 +419,9 @@ void searchDoctors(char nameOrSecondName[100] ) {
     }
         sql = "test";
     /* Create SQL statement */
-    sql = strconcat1(6, "SELECT * from doctors where name like '%%", nameOrSecondName,"%%' ",
-                    "OR secondName like '%%",nameOrSecondName,"%%'");
+    sql = strconcat1(9, "SELECT * from doctors where name like '%%", nameOrSecondNameOrPwz,"%%' ",
+                    "OR secondName like '%%",nameOrSecondNameOrPwz,"%%' ",
+                     "OR pwzNumber like '%%",nameOrSecondNameOrPwz,"%%'");
     rc = sqlite3_exec(db, sql, cbShowAllPatients, (void *) data, &zErrMsg);
 
     if (rc != SQLITE_OK) {

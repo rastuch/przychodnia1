@@ -6,7 +6,7 @@ var patients_8c =
     [ "deletePatientById", "patients_8c.html#a49f839c521844a272a75d82de18b7503", null ],
     [ "getPatientById", "patients_8c.html#a7cc15a2fd9b3b5ed40c162d3ee3a74e8", null ],
     [ "insertData", "patients_8c.html#a1b4259eb03fb8ada2163f1157cc66f35", null ],
-    [ "searchPatients", "patients_8c.html#a059ff86e50be808f9b8745ae3e0e7abd", null ],
+    [ "searchPatients", "patients_8c.html#a7ed5c9b05996c16f61a688865f625487", null ],
     [ "showAllpatients", "patients_8c.html#ad984bb0210cee9f39adc2f44ba68611d", null ],
     [ "sortPatientOrder", "patients_8c.html#ac55f8d55af5c1eb9d9e58ad760439fea", null ],
     [ "strconcat", "patients_8c.html#a6d306fef9abb8714dc3980791bfb40aa", null ],

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['searchdoctors_67',['searchDoctors',['../doctors_8c.html#a8e33b5ec9e2778de68cf5170d1709d4a',1,'searchDoctors(char nameOrSecondName[100]):&#160;doctors.c'],['../doctors_8h.html#a8e33b5ec9e2778de68cf5170d1709d4a',1,'searchDoctors(char nameOrSecondName[100]):&#160;doctors.c']]],
-  ['searchpatients_68',['searchPatients',['../patients_8c.html#a059ff86e50be808f9b8745ae3e0e7abd',1,'searchPatients(char nameOrSecondName[100]):&#160;patients.c'],['../patients_8h.html#a059ff86e50be808f9b8745ae3e0e7abd',1,'searchPatients(char nameOrSecondName[100]):&#160;patients.c']]],
+  ['searchdoctors_67',['searchDoctors',['../doctors_8c.html#a0fdc644aa75cd67233ff6cfae127ed8b',1,'searchDoctors(char nameOrSecondNameOrPwz[100]):&#160;doctors.c'],['../doctors_8h.html#a0fdc644aa75cd67233ff6cfae127ed8b',1,'searchDoctors(char nameOrSecondNameOrPwz[100]):&#160;doctors.c']]],
+  ['searchpatients_68',['searchPatients',['../patients_8c.html#a7ed5c9b05996c16f61a688865f625487',1,'searchPatients(char nameOrSecondNameOrPesel[100]):&#160;patients.c'],['../patients_8h.html#a7ed5c9b05996c16f61a688865f625487',1,'searchPatients(char nameOrSecondNameOrPesel[100]):&#160;patients.c']]],
   ['secondname_69',['secondName',['../struct_doctor.html#a3a099f4d6721197ded9a64099911a8d7',1,'Doctor::secondName()'],['../struct_patient.html#a3a099f4d6721197ded9a64099911a8d7',1,'Patient::secondName()']]],
   ['showalldoctors_70',['showAllDoctors',['../doctors_8c.html#ae2612e1e8ca56323c8c74a2fccab13c3',1,'showAllDoctors(char sortByTableName[], char sortOrder[]):&#160;doctors.c'],['../doctors_8h.html#a8cc216719f33b9d77653f1ca7b2faf73',1,'showAllDoctors():&#160;doctors.h']]],
   ['showallpatients_71',['showAllpatients',['../patients_8c.html#ad984bb0210cee9f39adc2f44ba68611d',1,'showAllpatients(char sortByColumnName[], char sortOrder[]):&#160;patients.c'],['../patients_8h.html#a3312785158b9d8fe21dafc76391bfc3d',1,'showAllpatients():&#160;patients.h']]],
